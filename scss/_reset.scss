@@ -211,8 +211,8 @@ input,
 select,
 textarea {
     font-family            : $font-main-family;
-    font-weight            : 500;
-    color                  : var(--white);
+    font-weight            : 400;
+    color                  : var(--body-text);
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering         : optimizeLegibility;
@@ -224,15 +224,15 @@ img {
     height                : auto;
     max-width             : 100%;
     vertical-align        : middle;
-    -ms-interpolation-mode: bicubic
+    -ms-interpolation-mode: bicubic;
 }
 
 p {
     font-family: $font-main-family;
-    font-weight: 500;
+    font-weight: 400;
     font-size  : 15px;
-    line-height: 20px;
-    color      : var(--body-Text);
+    line-height: 22.43px;
+    color      : var(--body-text);
 }
 
 strong,
@@ -543,7 +543,7 @@ fieldset {
         top: 50%;
         font-family: $fontIcon;
         font-size: 14px;
-        color: var(--Body-Text);
+        color: var(--body-text);
         background-color: var(--secondary);
         pointer-events: none;
         -webkit-transition: .25s all ease;
@@ -596,17 +596,17 @@ select {
 
 /* Placeholder color */
 ::-webkit-input-placeholder {
-    color: var(--body-Text);
+    color: var(--body-text);
 }
 
 ::-moz-placeholder {
-    color  : var(--body-Text);
+    color  : var(--body-text);
     opacity: 1;
 }
 
 /* Since FF19 lowers the opacity of the placeholder by default */
 :-ms-input-placeholder {
-    color: var(--body-Text);
+    color: var(--body-text);
 }
 
 /* Typography

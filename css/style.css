@@ -1,23 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --Bg: #101320;
-  --White: #fff;
-  --black: #111;
-  --Text-Title: #CED6EE;
-  --Body-Text: #8691B2;
-  --Note: #4E556F;
-  --ffac-4-b: #FF981E;
-  --primary:#07CF06;
-  --secondary:#1D2239;
-  --star: #FFA438;
-  --border: #242C48;
-  --backdrop: #161A2B;
-  --backdrop-1: #1D2237;
-  --liner-primary: linear-gradient(273.96deg, #07CF06 4.1%, #EAF90A 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
-  --liner-button: linear-gradient(274deg, #01BF00 4.1%, #63CE63 100%);
+  --bg: #08090D;
+  --white:#ffffff;
+  --bg1:#181D2E;
+  --bg2:#0B0F18;
+  --bg3:#181F2F;
+  --bg4:#101623;
+  --body-text: #55657E;
+  --primary:#6055FF;
+  --line:#252B3E;
+  --text:#93ACD3;
+  --pink:#FF315D;
+  --violet:#A064F9;
+  --yellow:#FCD377;
+  --live:#EE1446;
+  --dot:#4DED3B;
+  --bg-input:rgba(147, 172, 211, 0.1);
+  --bg-white:rgba(255, 255, 255, 0.1);
+  --bg-white2:rgba(255, 255, 255, 0.2);
+  --dot:rgba(132, 196, 17, 1);
+  --box:rgba(0, 0, 0, 0.7);
+  --bg-popup:rgba(41, 34, 136, 0.5);
 }
 
 /**
-  * Name: Likea faucet Dashboard HTML Template
+  * Name: Q6 HTML Template
   * Version: 1.0.1
   * Author: Themesflat
   * Author URI: http://www.themesflat.com
@@ -159,7 +166,7 @@ html {
 }
 
 body {
-  background: var(--Bg);
+  background: var(--bg);
   line-height: 1;
   padding: 0 !important;
 }
@@ -226,9 +233,9 @@ button,
 input,
 select,
 textarea {
-  font-family: "Red Hat Display", sans-serif;
-  font-weight: 500;
-  color: var(--White);
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  color: var(--body-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -244,11 +251,11 @@ img {
 }
 
 p {
-  font-family: "Red Hat Display", sans-serif;
-  font-weight: 500;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
   font-size: 15px;
-  line-height: 20px;
-  color: var(--Body-Text);
+  line-height: 22.43px;
+  color: var(--body-text);
 }
 
 strong,
@@ -396,7 +403,7 @@ del,
 table,
 th,
 td {
-  border: 1px solid #343444;
+  border: 1px solid var(--bg-input);
 }
 
 table {
@@ -468,7 +475,7 @@ textarea,
 select {
   font-size: 14px;
   max-width: 100%;
-  background: #fff;
+  background: var(--bg-input);
   /* Removing the inner shadow on iOS inputs */
 }
 
@@ -553,7 +560,7 @@ fieldset {
   top: 50%;
   font-family: "icomoon";
   font-size: 14px;
-  color: var(--Body-Text);
+  color: var(--body-text);
   background-color: var(--secondary);
   pointer-events: none;
   -webkit-transition: 0.25s all ease;
@@ -574,7 +581,7 @@ select {
   width: 100%;
   padding: 10px 16px;
   height: 44px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 15px;
   font-weight: 500;
   line-height: 20px;
@@ -604,17 +611,17 @@ select.wg-select {
 
 /* Placeholder color */
 ::-webkit-input-placeholder {
-  color: #171412;
+  color: var(--body-text);
 }
 
 ::-moz-placeholder {
-  color: #171412;
+  color: var(--body-text);
   opacity: 1;
 }
 
 /* Since FF19 lowers the opacity of the placeholder by default */
 :-ms-input-placeholder {
-  color: #171412;
+  color: var(--body-text);
 }
 
 /* Typography
@@ -625,41 +632,40 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Red Hat Display", sans-serif;
-  color: var(--White);
-  font-weight: 800;
+  font-family: "Kanit", sans-serif;
+  color: var(--white);
+  font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
 h1, .h1 {
-  font-size: 100px;
-  line-height: 132px;
+  font-size: 80px;
+  line-height: 88.5px;
 }
 
 h2, .h2 {
-  font-size: 60px;
-  line-height: 79px;
+  font-size: 50px;
+  line-height: 74.75px;
 }
 
 h3, .h3 {
-  font-size: 38px;
-  line-height: 50px;
+  font-size: 40px;
+  line-height: 44px;
 }
 
 h4, .h4 {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 24px;
+  line-height: 35.88px;
 }
 
 h5, .h5 {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 19px;
+  font-size: 20px;
+  line-height: 29.9px;
 }
 
 h6, .h6 {
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 15px;
+  line-height: normal;
 }
 
 /* Extra classes
@@ -786,7 +792,7 @@ h6, .h6 {
 -------------------------------------------------------------- */
 a {
   text-decoration: none;
-  color: var(--Text-Title);
+  color: var(--white);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -815,7 +821,7 @@ a:focus {
   margin-right: auto;
   padding-right: 10px;
   padding-left: 10px;
-  width: 1130px;
+  width: 1414px;
   max-width: 100%;
 }
 .tf-container.full {
@@ -841,9 +847,6 @@ a:focus {
 .tf-container.space30 .row > * {
   padding-left: 15px !important;
   padding-right: 15px !important;
-}
-.tf-container.w1060 {
-  width: 1080px;
 }
 
 .header {
@@ -947,7 +950,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 15px;
   font-weight: 800;
   line-height: 20px;
@@ -991,7 +994,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 15px;
   font-weight: 800;
   line-height: 20px;
@@ -1061,7 +1064,7 @@ form input[type=color] {
   height: 44px;
   padding: 10px 16px;
   font-size: 14px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: 500;
   line-height: 19px;
   background-color: var(--secondary);
@@ -1087,7 +1090,7 @@ form input[type=search]::placeholder,
 form input[type=tel]::placeholder,
 form input[type=color]::placeholder {
   font-size: 14px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: 500;
   line-height: 19px;
   color: var(--Body-Text);
@@ -1120,7 +1123,7 @@ form input[type=submit] {
   padding: 10px 16px;
   height: 44px;
   font-size: 16px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: 500;
   line-height: 20px;
   background-color: var(--secondary);
@@ -2681,7 +2684,7 @@ form.style-2 .button-submit button {
 .heading-section {
   font-size: 38px;
   line-height: 50px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Kanit", sans-serif;
   color: var(--White);
   font-weight: 800;
   margin-bottom: 30px;
