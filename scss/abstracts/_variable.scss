@@ -1,0 +1,51 @@
+//settings
+$font-main-size: 15px;
+$font-main-line: 140%;
+$font-main-family: "Kanit", sans-serif;
+$fontIcon: "icomoon";
+
+$h1-fs: 80px;
+$h1-lh: 88.5px;
+$h2-fs: 50px;
+$h2-lh: 74.75px;
+$h3-fs: 40px;
+$h3-lh: 44px;
+$h4-fs: 24px;
+$h4-lh: 35.88px;
+$h5-fs: 20px;
+$h5-lh: 29.9px;
+$h6-fs: 15px;
+$h6-lh: normal;
+
+// color
+$white: #ffffff;
+$black: #08090D;
+
+:root {
+    --bg: #08090D;
+    --white:#ffffff;
+    --bg1:#181D2E;
+    --bg2:#0B0F18;
+    --bg3:#181F2F;
+    --bg4:#101623;
+    --body-Text: #55657E;
+    --primary :#6055FF;
+    --line:#252B3E;
+    --text:#93ACD3;
+    --pink:#FF315D;
+    --violet:#A064F9;
+    --yellow:#FCD377;
+    --live:#EE1446;
+    --dot:#4DED3B;
+    
+
+    //rgb
+    --bg-input:rgba(147, 172, 211, 0.1);
+    --bg-white:rgba(255, 255, 255, 0.1);
+    --bg-white2:rgba(255, 255, 255, 0.2);
+    --dot:rgba(132, 196, 17, 1);
+    --box:rgba(0, 0, 0, 0.7);
+    --bg-popup:rgba(41, 34, 136, 0.5);
+
+    
+}

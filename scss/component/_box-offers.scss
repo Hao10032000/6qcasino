@@ -1,0 +1,12 @@
+.box-offer-item {
+    width: 100%;
+    border-radius: 14px;
+    padding: 55px 16px 12px;
+    position: relative;
+    @include flex(center,center);
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    background: var(--backdrop);
+    box-shadow: 0px 5px 14px 0px rgba(16, 19, 32, 0.27), 0px 8px 22px 0px #040810;
+}

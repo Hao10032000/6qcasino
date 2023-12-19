@@ -1,0 +1,213 @@
+// section-menu-left
+.section-menu-left {
+    position: fixed;
+    width: 340px;
+    min-width: 340px;
+    height: 100%;
+    left: 0;
+    overflow-y: auto;
+    z-index: 20;
+    background-color:  var(--backdrop);
+    padding-top: 80px;
+    @include flex(center,start);
+    flex-direction: column;
+    flex-shrink: 0;
+    @include transition3;
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    > .box-logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 30;
+        padding: 15px 55px 15px 52px;
+        background: linear-gradient(100deg, #2B4940 0.77%, #1E2C39 78.32%);
+    }
+    > .center {
+        border-right: 1px solid #1D2239;
+        padding: 30px;
+        .center-item {
+            .images-wrap {
+                .grid-box {
+                    margin-top: 20px;
+                    @include grid(2, 1fr, 10px, 10px);
+                    .box {
+                        position: relative;
+                        border-radius: 14px;
+                        overflow: hidden;
+                        img {
+                            width: 135px;
+                            height: 58px;
+                            object-fit: cover;
+                        }
+                        div {
+                            position: absolute;
+                            top: 11px;
+                            left: 12px;
+                            color: var(--White);
+                            font-size: 14px;
+                            font-weight: 900;
+                            line-height: 19px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            .menu-list {
+                @include d-flex;
+                gap: 22px;
+                flex-direction: column;
+                .menu-item {
+                    @include transition3;
+                    a {
+                        position: relative;
+                        @include flex(center,start);
+                        gap: 8px;
+                        .icon {
+                            width: 22px;
+                            height: 22px;
+                            i {
+                                font-size: 22px;
+                                color: var(--Body-Text);
+                                @include transition3;
+                            }
+                        }
+                        .text {
+                            color: var(--Body-Text);
+                            font-size: 16px;
+                            font-weight: 800;
+                            line-height: 21px;
+                            text-transform: capitalize;
+                            @include transition3;
+                        }
+                        &:hover {
+                            &::after,
+                            i,
+                            .text {
+                                color: var(--ffac-4-b);
+                            }
+                        }
+                    }
+                    &.has-children {
+                        > a::after {
+                            position: absolute;
+                            content: '\e944';
+                            right: -4px;
+                            font-size: 22px;
+                            font-family: $fontIcon;
+                            @include transition3;
+                        }
+                        .sub-menu {
+                            display: none;
+                            margin-top: 20px;
+                            .sub-menu-item:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+                        }
+                        &.active {
+                            padding: 14px;
+                            border-radius: 8px;
+                            background: var(--secondary);
+                            > a {
+                                i,
+                                .text {
+                                    color: var(--ffac-4-b);
+                                }
+                                &::after {
+                                    transform: rotate(180deg);
+                                    color: var(--ffac-4-b);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .advertising {
+                a {
+                    width: 100%;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .tite-item {
+                color: var(--Text-Title);
+                font-size: 12px;
+                font-weight: 800;
+                line-height: 16px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+            .invite {
+                .text {
+                    color: var(--Body-Text);
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    margin-bottom: 15px;
+                }
+            }
+            .faq {
+                ul {
+                    @include flex(start,start);
+                    gap: 12px;
+                    flex-direction: column;
+                    margin-bottom: 15px;
+                }
+                a {
+                    @include flex(center,start);
+                    gap: 10px;
+                    color: var(--Body-Text);
+                    font-size: 15px;
+                    font-weight: 800;
+                    line-height: 20px;
+                    text-transform: capitalize;
+                    i {
+                        font-size: 20px;
+                        color: var(--Body-Text);
+                        @include transition3;
+                    }
+                    &.mb-15 {
+                        margin-bottom: 15px;
+                    }
+                    &:hover {
+                        color: var(--White);
+                        i {
+                            color: var(--White);
+                        }
+                    }
+                }
+            }
+            .collapse {
+                @include flex(center,start);
+                gap: 8px;
+                color: var(--Body-Text);
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 21px;
+                text-transform: capitalize;
+                @include transition3;
+                cursor: pointer;
+                i {
+                    font-size: 22px;
+                    color: var(--Body-Text);
+                    @include transition3;
+                }
+                &:hover {
+                    color: var(--White);
+                    i {
+                        color: var(--White);
+                    }
+                }
+            }
+        }
+        .divider {
+            width: 100%;
+            height: 1px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, rgba(36, 44, 72, 0.00) 0%, #242C48 32.71%, #242C48 52.66%, #242C48 73.75%, rgba(36, 44, 72, 0.00) 100%);
+        }
+    }
+}

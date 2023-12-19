@@ -1,0 +1,157 @@
+.live-contest-item {
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--backdrop);
+    .image {
+        position: relative;
+        .wrap {
+            position: absolute;
+            text-align: center;
+            top: 16px;
+            left: 50%;
+            @include flex(center,center);
+            flex-direction: column;
+            @include center(-50%,0);
+            .featured-countdown {
+                margin: auto;
+                margin-bottom: 14px;
+            }
+            .item-1 {
+                margin-bottom: -12px;
+            }
+            .item-2 {
+                margin-bottom: -10px;
+            }
+            .text {
+                color: var(--White);
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 32px;
+                text-transform: capitalize;
+            }
+            &.t1 {
+                width: max-content;
+                left: 48%;
+                .featured-countdown {
+                    margin-bottom: 23px;
+                }
+            }
+            &.t2 {
+                width: max-content;
+                left: 48%;
+                .featured-countdown {
+                    margin-bottom: 16px;
+                }
+                .item-5 {
+                    margin-bottom: -7px;
+                }
+            }
+        }
+    }
+    .content {
+        padding: 20px;
+        .list-infor {
+            margin-bottom: 26px;
+            @include flex(center,center);
+            > div {
+                color: var(--Note, #4E556F);
+                font-size: 13px;
+                line-height: 17px;
+                text-transform: capitalize;
+                &:first-child {
+                    width: 19.5%;
+                }
+                &:nth-child(2) {
+                    flex-grow: 1;
+                }
+                &:last-child {
+                    width: 26.18%;
+                }
+            }
+        }
+        ul {
+            li {
+                @include flex(center,center);
+                &:not(:last-child) {    
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid var(--border);
+                    margin-bottom: 15px;
+                }
+                > div {
+                    &:first-child {
+                        width: 19.5%;
+                    }
+                    &:nth-child(2) {
+                        flex-grow: 1;
+                        @include flex(center,star);
+                        gap: 10px;
+                        .avatar {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            padding: 1px;
+                            flex-shrink: 0;
+                            border: 1px solid var(--Note);
+                            img {
+                                border-radius: 50%;
+                            }
+                        }
+                        .unit {
+                            .name {
+                                color: var(--Text-Title);
+                                font-size: 15px;
+                                font-weight: 800;
+                                line-height: 20px;
+                                text-transform: capitalize;
+                            }
+                            .text {
+                                color: var(--Body-Text);
+                                font-size: 14px;
+                                font-weight: 700;
+                                line-height: 19px;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        width: 26.18%;
+                        color: var(--Text-Title);
+                        font-size: 15px;
+                        font-weight: 800;
+                        line-height: 20px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        &.t1 {
+            .list-infor {
+                > div {
+                    &:first-child {
+                        width: 22.5%;
+                    }
+                    &:last-child {
+                        width: 22.18%;
+                    }
+                }
+            }
+            ul {
+                li {
+                    > div {
+                        &:first-child {
+                            width: 22.5%;
+                        }
+                        &:last-child {
+                            width: 22.18%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        a {
+            border-radius: 0;
+        }
+    }
+}

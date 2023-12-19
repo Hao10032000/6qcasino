@@ -1,0 +1,280 @@
+.page-title {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        top: -499px;
+        left: -205px;
+        width: 782px;
+        height: 782px;
+        flex-shrink: 0;
+        border-radius: 100%;
+        opacity: 0.12;
+        background: #6360FF;
+        filter: blur(125px);
+    }
+    > .icon {
+        position: absolute;
+        &.item-1 {
+            left: 390px;
+            top: 370px;
+        }
+        &.item-2 {
+            left: 540px;
+            top: 150px;
+            transform: rotate(-13.831deg);
+            filter: blur(2px);
+        }
+        &.item-3 {
+            left: 626px;
+            top: 562px;
+        }
+        &.item-4 {
+            right: 615px;
+            top: 195px;
+        }
+        &.item-5 {
+            right: 616px;
+            top: 515px;
+        }
+        &.item-6 {
+            right: 293px;
+            top: 315px;
+            transform: rotate(32.383deg);
+            filter: blur(2px);
+        }
+    }
+    .overlay {
+        opacity: 0.05;
+        position: absolute;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(16, 19, 32, 0) 50.77%, #101320 100%);
+        }
+    }
+    .content {
+        text-align: center;
+        position: relative;
+        padding-top: 201px;
+        padding-bottom: 144px;
+        padding-left: 58px;
+        z-index: 5;
+        h2 {
+            margin-bottom: -12px;
+        }
+        h1 {
+            margin-bottom: 9px;
+            span {
+                margin-right: 9px;
+            }
+        }
+        h4 {
+            @include flex(center,center);
+            gap: 6px;
+            margin-bottom: 53px;
+            .box-text {
+                width: max-content;
+                height: 38px;
+                padding: 4px 16px;
+                display: inline-block;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                background: var(--secondary);
+            }
+        }
+    }
+    .bottom {
+        @include flex(center,center);
+        gap: 12px;
+    }
+}
+
+.wg-best-game {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url(./../images/box-game/bg-best-game.png) center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        mix-blend-mode: luminosity;
+        opacity: 0.3;
+    }
+    .content {
+        .text {
+            color: var(--Body-Text);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            margin-left: -4px;
+            margin-bottom: 30px;
+            span {
+                font-weight: 900;
+            }
+        }
+        a {
+            margin-left: -4px;
+        }
+    }
+    .grid-box {
+        max-width: 700px;
+        margin-left: auto;
+        @include grid(4,1fr,20px,20px);
+    }
+}
+
+.wg-the-arena {
+    @include d-flex;
+    padding: 15px;
+    position: relative;
+    .overlay {
+        border-radius: 14px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #1D2239;
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.1;
+            mix-blend-mode: luminosity;
+        }
+        .item {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -432px;
+            right: -224px;
+            width: 624.143px;
+            height: 466.879px;
+            transform: rotate(20.69deg);
+            flex-shrink: 0;
+            border-radius: 624.143px;
+            background: #DEBDAF;
+            filter: blur(75px);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            top: -182px;
+            right: -303px;
+            width: 420px;
+            height: 190px;
+            flex-shrink: 0;
+            border-radius: 420px;
+            background: #DEBDAF;
+            filter: blur(50px);
+        }
+    }
+    .left {
+        padding: 19px 0px 18px 54px;
+        width: 55%;
+        text-align: center;
+        position: relative;
+        .heading {
+            margin-bottom: 17px;
+            img {
+                margin-bottom: -28px;
+            }
+        }
+        .grid-item {
+            @include grid(4,1fr,15px,15px);
+        }
+    }
+    .right {
+        position: relative;
+        width: 45%;
+        height: 100%;
+        .item-1 {
+            position: absolute;
+            top: -36px;
+            left: 78px;
+            z-index: 2;
+        }
+        .item-2 {
+            position: absolute;
+            top: 131px;
+            left: -22px;
+        }
+    }
+}
+
+.wg-the-vault {
+    padding: 15px;
+    position: relative;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.6;
+        mix-blend-mode: luminosity;
+        filter: blur(0.5px);
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: '';
+            background: linear-gradient(180deg, rgba(16, 19, 32, 0.00) 0%, rgba(8, 11, 23, 0.82) 100%);
+        }
+    }
+    .content {
+        max-width: 1019px;
+        padding-top: 49px;
+        padding-bottom: 44px;
+        text-align: center;
+        position: relative;
+        .item-1 {
+            margin-bottom: 2px;
+        }
+        .item-2 {
+            margin-bottom: -37px;
+        }
+        .text {
+            color: var(--White);
+            text-align: center;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 53px;
+            text-transform: capitalize;
+            margin-bottom: 14px;
+            padding-left: 13px;
+        }
+        .grid-icon {
+            @include flex(center,center);
+            gap: 10px;
+            padding-left: 13px;
+            img {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                margin-bottom: 29px;
+            }
+        }
+        .bot {
+            padding-left: 13px;
+        }
+    }
+}

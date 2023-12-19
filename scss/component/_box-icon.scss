@@ -1,0 +1,35 @@
+.box-icon {
+    width: 100%;
+    padding: 12px;
+    @include flex(center,center);
+    flex-direction: column;
+    gap: 11px;
+    border-radius: 14px;
+    background: linear-gradient(228deg, #232943 7.47%, #161A2B 86.44%);
+    box-shadow: 0px 5px 14px 0px rgba(16, 19, 32, 0.27), 0px 8px 22px 0px #040810;
+    .icon {
+        width: 82px;
+        height: 82px;
+        i {
+            font-size: 82px;
+            color: var(--Note);
+            @include transition3;
+        }
+    }
+    h5 {
+        width: 63px;
+        height: 38px;
+        margin: auto;
+        text-align: center;
+        font-weight: 800;
+        a {
+            color: var(--Body-Text);
+        }
+    }
+    &:hover {
+        .icon i,
+        h5 a {
+            color: var(--ffac-4-b);
+        }
+    }
+}

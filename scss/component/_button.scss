@@ -1,0 +1,75 @@
+.tf-button {
+    width: max-content;
+    height: 44px;
+    padding: 12px;
+    color: var(--White);
+    @include flex(center,center);
+    gap: 8px;
+    font-family: $font-main-family;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 20px;
+    border-radius: 14px;
+    // border: 1px solid rgba(255, 255, 255, 0.50);
+    background: var(--liner-button);
+    box-shadow: 0px 2px 2px 0px #97FFAF inset;
+    @include transition3();
+    background-size: 100%;
+    &.w158 {
+        width: 158px;
+    }
+    &.w224 {
+        width: 224px;
+    }
+    &.w200 {
+        width: 200px;
+    }
+    i {
+        font-size: 20px;
+    }
+    &:hover {
+        background-size: 300%;
+        color: var(--White);    
+    }
+}
+
+.tf-button-1 {
+    width: 136px;
+    height: 44px;
+    padding: 12px;
+    color: var(--White);
+    @include flex(center,center);
+    gap: 8px;
+    font-family: $font-main-family;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 20px;
+    border-radius: 14px;
+    // border: 1px solid rgba(255, 255, 255, 0.50);
+    background: linear-gradient(139deg, #474D69 16.13%, #292F4D 74.19%);
+    box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.06) inset;
+    @include transition3();
+    i {
+        font-size: 20px;
+    }
+    &.active {
+        background: linear-gradient(310deg, #F50 11.16%, #FFA071 86.78%);
+        box-shadow: 0px 2px 2px 0px #FFC1A1 inset;
+        &:hover {
+            background: linear-gradient(139deg, #474D69 16.13%, #292F4D 74.19%);
+            box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.06) inset;
+        }
+    }
+    &:hover {
+        background: linear-gradient(310deg, #F50 11.16%, #FFA071 86.78%);
+        box-shadow: 0px 2px 2px 0px #FFC1A1 inset;
+    }
+    &.default {
+        // border: 1px solid rgba(255, 255, 255, 0.50);
+        background: var(--secondary);
+        &:hover {
+            box-shadow: none;
+            background-color: var(--White);
+        }
+    }
+}
