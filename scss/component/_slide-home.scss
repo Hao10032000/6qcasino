@@ -1,0 +1,66 @@
+.q6-widget-slide{
+    position: relative;
+    & .q6-slide{
+        & .q6-slide-item{
+            & .q6-image{
+                & img{
+                    position:absolute;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            & .q6-content{
+                padding: 216px 0 228px 0;
+                max-width: 575px;
+                width: 100%;
+                & .sub-title{
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: 29.9px;
+                    letter-spacing: 7px;
+                    text-transform: uppercase;
+                    color: var(--white);
+                    margin-bottom: -10px;
+                    display: inline-block
+                }
+                & .title{
+                    margin-bottom: 13px;
+
+                }
+            }
+        }
+    }
+}
+.featured-countdown {
+    .countdown__timer {
+        padding: 5px 10px;
+       display: inline-block;
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(2px);
+        .countdown__item {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 21.17px;
+            position: relative;
+            
+            .countdown__label {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 23.92px;
+                margin-left: 4px;
+                color: rgba(255, 255, 255, 0.2);
+            }
+            &:not(:last-child) {
+                &::after {
+                    position: absolute;
+                    content: ':';
+                    opacity: 0.2;
+                    right: -13px;
+                }
+                margin-right: 25px;
+            }
+        }
+    }
+}

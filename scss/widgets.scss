@@ -156,56 +156,6 @@
     box-shadow: 0px 2px 2px 0px #8BFFA6 inset;
 }
 
-.featured-countdown {
-    .countdown__timer {
-        width: 193px;
-        @include flex(center,center);
-        padding: 5px 10px;
-        gap: 23px;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.10);
-        backdrop-filter: blur(2px);
-        .countdown__item {
-            color: var(--White);
-            font-size: 12px;
-            font-weight: 800;
-            line-height: 16px;
-            position: relative;
-            .countdown__label {
-                opacity: 0.2;
-                margin-left: 3px;
-            }
-            &:not(:last-child) {
-                &::after {
-                    position: absolute;
-                    content: ':';
-                    opacity: 0.2;
-                    right: -13px;
-                }
-            }
-        }
-    }
-    &.style-1 {
-        .countdown__timer {
-            padding: 0;
-            width: unset;
-            background: unset;
-            justify-content: start;
-            gap: 24px;
-            .countdown__item {
-                font-size: 18px;
-                line-height: 24px;
-                &:not(:last-child) {
-                    &::after {
-                        right: -15px;
-                        opacity: 0.4;
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
-}
 
 .block-price {
     @include flex(center,start);
@@ -472,50 +422,12 @@
 .section-content-right {
     position: relative;
     width: 100%;
-    padding-top: 80px;
-    padding-left: 340px !important;
+    padding-left: 300px !important;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition   : all 0.3s ease-in-out;
     -ms-transition    : all 0.3s ease-in-out;
     -o-transition     : all 0.3s ease-in-out;
     transition        : all 0.3s ease-in-out;
-    .main-content {
-        padding-top: 30px;
-        padding-right: 30px;
-        padding-bottom: 40px;
-        position: relative;
-        @include d-flex;
-        .main-content-inner {
-            padding-left: 80px;
-            padding-right: 80px;
-            .main-content-bottom {
-                @include flex(center,space-between);
-                border-top: 1px solid var(--secondary);
-                padding-top: 30px;
-                ul {
-                    @include flex(center,center);
-                    gap: 20px;
-                    li {
-                        a {
-                            color: var(--Note);
-                            font-size: 15px;
-                            font-weight: 500;
-                            line-height: 24px;
-                            &:hover {
-                                color: var(--primary);
-                            }
-                        }
-                    }
-                }
-                .copy-right {
-                    color: var(--Note);
-                    font-size: 15px;
-                    font-weight: 500;
-                    line-height: 24px;
-                }
-            }
-        }
-    }
 }
 
 .box-image-dashboard {

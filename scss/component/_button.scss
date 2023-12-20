@@ -1,75 +1,118 @@
-.tf-button {
-    width: max-content;
-    height: 44px;
-    padding: 12px;
-    color: var(--White);
-    @include flex(center,center);
-    gap: 8px;
+
+.q6-button{
+    padding: 9px 38px 12px 38px;
+    font-size: 16px;
     font-family: $font-main-family;
-    font-size: 15px;
-    font-weight: 800;
-    line-height: 20px;
-    border-radius: 14px;
-    // border: 1px solid rgba(255, 255, 255, 0.50);
-    background: var(--liner-button);
-    box-shadow: 0px 2px 2px 0px #97FFAF inset;
-    @include transition3();
-    background-size: 100%;
-    &.w158 {
-        width: 158px;
-    }
-    &.w224 {
-        width: 224px;
-    }
-    &.w200 {
-        width: 200px;
-    }
-    i {
-        font-size: 20px;
-    }
+    font-weight: 600;
+    line-height: 22.4px;
+    background: linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
+    box-shadow: 0px 3px 16px 0px rgba(102, 89, 255, 0.50), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 4px 0px 0px #403999;
+    border-radius: 10px;
+    color: var(--white);
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 4px;
     &:hover {
-        background-size: 300%;
-        color: var(--White);    
+        background: linear-gradient(0deg, rgba(129, 118, 254, 1) 0%, rgba(89, 78, 255, 1) 100%);
+        color: var(--white);
+
+    }
+    &.w100{
+        display: block;
+        width: 100%;
     }
 }
-
-.tf-button-1 {
-    width: 136px;
-    height: 44px;
-    padding: 12px;
-    color: var(--White);
-    @include flex(center,center);
-    gap: 8px;
+.q6-button-view-all{
+    padding: 3.5px 11.5px;
+    font-size: 14px;
     font-family: $font-main-family;
-    font-size: 15px;
-    font-weight: 800;
-    line-height: 20px;
-    border-radius: 14px;
-    // border: 1px solid rgba(255, 255, 255, 0.50);
-    background: linear-gradient(139deg, #474D69 16.13%, #292F4D 74.19%);
-    box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.06) inset;
-    @include transition3();
-    i {
-        font-size: 20px;
-    }
-    &.active {
-        background: linear-gradient(310deg, #F50 11.16%, #FFA071 86.78%);
-        box-shadow: 0px 2px 2px 0px #FFC1A1 inset;
-        &:hover {
-            background: linear-gradient(139deg, #474D69 16.13%, #292F4D 74.19%);
-            box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.06) inset;
-        }
-    }
+    font-weight: 600;
+    line-height: 22.93px;
+    border-radius: 8px;
+    color: var(--white);
+    display: inline-block;
+    text-align: center;
+    border: solid 1px var(--bg-white);
     &:hover {
-        background: linear-gradient(310deg, #F50 11.16%, #FFA071 86.78%);
-        box-shadow: 0px 2px 2px 0px #FFC1A1 inset;
+        color: var(--primary);
+        border: solid 1px var(--primary);
+
     }
-    &.default {
-        // border: 1px solid rgba(255, 255, 255, 0.50);
-        background: var(--secondary);
+}
+.q6-read-more {
+	& .more-link {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 22.4px;
+		text-transform: capitalize;
+        color: var(--white);
+
+		& i {
+			margin-left: 10px;
+			display: inline-block;
+            font-size: 13px;
+		}
+
+		&:hover {
+			& i {
+				animation: 0.3s link-icon linear;
+			}
+		}
+
+		&:hover {
+			color: var(--primary);
+		}
+	}
+}
+
+.q6-button-large{
+    padding: 13px 72px 13px 72px;
+    font-size: 22px;
+    font-family: $font-main-family;
+    font-weight: 600;
+    line-height: 30.8px;
+    background: linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
+    box-shadow: 0px 3px 16px 0px rgba(102, 89, 255, 0.50), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 4px 0px 0px #403999;
+    border-radius: 10px;
+    color: var(--white);
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 4px;
+    &:hover {
+        background: linear-gradient(0deg, rgba(129, 118, 254, 1) 0%, rgba(89, 78, 255, 1) 100%);
+        color: var(--white);
+
+    }
+    &.w100{
+        display: block;
+        width: 100%;
+    }
+}
+.q6-sc{
+    padding: 8.5px 40px;
+    font-size: 14px;
+    font-family: $font-main-family;
+    font-weight: 500;
+    line-height: 19.6px;
+    border-radius: 10px;
+    color: var(--white);
+    display: inline-block;
+    text-align: center;
+    &.violet{
+        background:  linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
+        box-shadow: 0px 3px 16px 0px rgba(102, 89, 255, 0.50), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 3px 0px 0px #403999;
+
         &:hover {
-            box-shadow: none;
-            background-color: var(--White);
+            background:  linear-gradient(180deg, #594EFF 0.8%, #8176FE 100%);
+            color: var(--white);   
         }
+    }
+    &.orange{
+        background:  linear-gradient(0deg, #FF6B00 0.8%, #FFA869 100%);
+        box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 3px 0px 0px #8C3B00, 0px 3px 16px 0px rgba(255, 157, 85, 0.50);    
+        &:hover {
+            background: linear-gradient(180deg, #FF6B00 0.8%, #FFA869 100%);
+            color: var(--white);   
+        }    
     }
 }
