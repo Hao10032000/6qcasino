@@ -4,6 +4,9 @@
     background: var(--backdrop);
     .image {
         position: relative;
+        img {
+            width: 100%;
+        }
         .wrap {
             position: absolute;
             text-align: center;

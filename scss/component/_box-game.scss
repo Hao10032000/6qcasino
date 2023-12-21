@@ -4,6 +4,7 @@
     overflow: hidden;
     position: relative;
     img {
+        width: 100%;
         @include transition3;
     }
     .text {

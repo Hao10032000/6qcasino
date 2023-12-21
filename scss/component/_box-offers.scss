@@ -1,12 +1,44 @@
 .box-offer-item {
     width: 100%;
-    border-radius: 14px;
-    padding: 55px 16px 12px;
-    position: relative;
-    @include flex(center,center);
-    flex-direction: column;
-    gap: 14px;
-    text-align: center;
-    background: var(--backdrop);
-    box-shadow: 0px 5px 14px 0px rgba(16, 19, 32, 0.27), 0px 8px 22px 0px #040810;
+
+    & .image {
+        margin-bottom: 10px;
+        display: block;
+
+        & img {
+            border-radius: 10px;
+        }
+
+    }
+
+    & .palying {
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--text);
+        line-height: 19.44px;
+        padding-left: 30px;
+        position: relative;
+
+        & span {
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 6px;
+            color: var(--white);
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: var(--dot);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: var(--dot);
+            filter: drop-shadow(0px 0px 12px #84C411);
+        }
+    }
 }

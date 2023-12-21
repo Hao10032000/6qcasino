@@ -1,62 +1,61 @@
 .widget-tabs {
     .widget-menu-tab {
-        @include flex(center,start);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         gap: 10px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        border-radius: 10px;
         width: 100%;
+        padding: 6px 17px;
+        background-color: var(--bg1);
+
         .item-title {
-            @include flex(center,center);
-            height: 44px;
-            padding: 12px;
+            @include flex(center, center);
+            height: 40px;
+            padding: 9px 16px;
             gap: 8px;
-            border-radius: 14px;
+            border-radius: 8px;
             background: var(--backdrop);
-            box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.06) inset;
             cursor: pointer;
             @include transition3;
+            position: relative;
+
             .inner {
-                @include flex(center,center);
+                @include flex(center, center);
                 gap: 8px;
-                color: var(--Body-Text);
+                color: var(--white);
                 font-size: 15px;
-                font-weight: 800;
-                line-height: 20px;
+                font-weight: 400;
+                line-height: 22.43px;
                 @include transition3;
-                img {
-                    // width: 22px;
-                    // height: 22px;
+
+                & i {
+                    font-size: 22px;
+                    color: var(--primary);
+
                 }
             }
+
             &:hover,
             &.active {
-                background: var(--liner-primary);
+                background: var(--primary);
+
                 .inner {
-                    color: var(--secondary);
+                    color: var(--white);
+                    & i{
+                        color: var(--white)
+                    }
                 }
             }
-        }
-    }   
-    .wrap-menu-tab {
-        @include flex(center,space-between);
-        padding: 16px 20px;
-        border-radius: 14px;
-        background: var(--backdrop);
-        margin-bottom: 20px;
-        .widget-menu-tab {
-            gap: 11px;
-            .item-title {
-                .inner {
-                    i {
-                        font-size: 22px;
-                    }
-                }
-                &:hover,
-                &.active {
-                    background: var(--liner-button);
-                    .inner {
-                        color: var(--White);
-                    }
-                }
+            &:not(:last-child)::after{
+                 content: '';
+                 position: absolute;
+                 right: -25%;
+                 height: 110%;
+                 width: 1px;
+                 opacity: 0.5;
+                 background: linear-gradient(90deg, rgba(67, 83, 109, 0.00) 0%, #43536D 48.66%, rgba(67, 83, 109, 0.00) 100%);
             }
         }
     }

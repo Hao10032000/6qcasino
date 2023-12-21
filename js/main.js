@@ -27,8 +27,8 @@
 
   var menuleft = function () {
     if ($('div').hasClass('section-menu-left')) {
-
-      $(document).on("click", ".menu-item.has-children", function () {
+      var bt =$(".section-menu-left").find(".has-children");
+      bt.on("click", function () {
         var args = { duration: 600 };
         if ($(this).hasClass("active")) {
           $(this).children(".sub-menu").slideUp(args);
@@ -57,7 +57,63 @@
     });
   };
 
+  $('ul.dropdown-menu').on('click', function(event){
+    event.stopPropagation();
+  });
+
+  var btnQuantity = function () {
+    if ($('div').hasClass('choose-amount')) {
+      $(".minus-btn").on("click", function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest("div").find("input");
+        var value = parseInt($input.val());
   
+        if (value > 1) {
+          value = value - 1;
+        }
+  
+        $input.val(value);
+      });
+  
+      $(".plus-btn").on("click", function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest("div").find("input");
+        var value = parseInt($input.val());
+  
+        if (value > 0) {
+          value = value + 1;
+        }
+  
+        $input.val(value);
+      });
+    }
+  };
+
+  var collapse_menu = function () {
+    if ($('div').hasClass('layout-wrap')) {
+      // $('.section-menu-left-mobile').on("click", function (e) {
+      //   $(this).addClass('focus');
+      // });
+      // $(document).on('click',function(e){
+      //   var clickID=e.target.classList;if((clickID=='section-menu-left-mobile')){
+      //       $('#section-menu-left-mobile').removeClass('focus');
+      // }});
+      $(".button-collapse-menu").on("click", function (e) {
+        $('.button-collapse-menu').toggleClass('active');
+        $('.layout-wrap').toggleClass('active');
+        $('.section-menu-left').toggleClass('active');
+        $('.section-menu-left-mobile').toggleClass('active');
+        $('.section-content-right').toggleClass('active');
+        $('.section-menu-left').find('.mobile-button').toggleClass('active');
+      })
+      $(".button-show-hide").on("click", function (e) {
+        $('.section-menu-left').toggleClass('active');
+        $('.section-menu-left').find('.mobile-button').toggleClass('active');
+      })
+    }
+  }
 
 
   // Dom Ready
@@ -65,6 +121,8 @@
     selectImages();
     menuleft();
     tabs();
+    btnQuantity();
+    collapse_menu();
   });
 
 })(jQuery);
