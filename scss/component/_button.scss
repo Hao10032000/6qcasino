@@ -1,5 +1,4 @@
-
-.q6-button{
+.q6-button {
     padding: 9px 38px 12px 38px;
     font-size: 16px;
     font-family: $font-main-family;
@@ -12,17 +11,20 @@
     display: inline-block;
     text-align: center;
     margin-bottom: 4px;
+
     &:hover {
         background: linear-gradient(0deg, rgba(129, 118, 254, 1) 0%, rgba(89, 78, 255, 1) 100%);
         color: var(--white);
 
     }
-    &.w100{
+
+    &.w100 {
         display: block;
         width: 100%;
     }
 }
-.q6-button-view-all{
+
+.q6-button-view-all {
     padding: 3.5px 11.5px;
     font-size: 14px;
     font-family: $font-main-family;
@@ -33,39 +35,41 @@
     display: inline-block;
     text-align: center;
     border: solid 1px var(--bg-white);
+
     &:hover {
         color: var(--primary);
         border: solid 1px var(--primary);
 
     }
 }
+
 .q6-read-more {
-	& .more-link {
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 22.4px;
-		text-transform: capitalize;
+    & .more-link {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22.4px;
+        text-transform: capitalize;
         color: var(--white);
 
-		& i {
-			margin-left: 10px;
-			display: inline-block;
+        & i {
+            margin-left: 10px;
+            display: inline-block;
             font-size: 13px;
-		}
+        }
 
-		&:hover {
-			& i {
-				animation: 0.3s link-icon linear;
-			}
-		}
+        &:hover {
+            & i {
+                animation: 0.3s link-icon linear;
+            }
+        }
 
-		&:hover {
-			color: var(--primary);
-		}
-	}
+        &:hover {
+            color: var(--primary);
+        }
+    }
 }
 
-.q6-button-large{
+.q6-button-large {
     padding: 13px 72px 13px 72px;
     font-size: 22px;
     font-family: $font-main-family;
@@ -78,17 +82,20 @@
     display: inline-block;
     text-align: center;
     margin-bottom: 4px;
+
     &:hover {
         background: linear-gradient(0deg, rgba(129, 118, 254, 1) 0%, rgba(89, 78, 255, 1) 100%);
         color: var(--white);
 
     }
-    &.w100{
+
+    &.w100 {
         display: block;
         width: 100%;
     }
 }
-.q6-sc{
+
+.q6-sc {
     padding: 8.5px 40px;
     font-size: 14px;
     font-family: $font-main-family;
@@ -98,21 +105,24 @@
     color: var(--white);
     display: inline-block;
     text-align: center;
-    &.violet{
-        background:  linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
+
+    &.violet {
+        background: linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
         box-shadow: 0px 3px 16px 0px rgba(102, 89, 255, 0.50), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 3px 0px 0px #403999;
 
         &:hover {
-            background:  linear-gradient(180deg, #594EFF 0.8%, #8176FE 100%);
-            color: var(--white);   
+            background: linear-gradient(180deg, #594EFF 0.8%, #8176FE 100%);
+            color: var(--white);
         }
     }
-    &.orange{
-        background:  linear-gradient(0deg, #FF6B00 0.8%, #FFA869 100%);
-        box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 3px 0px 0px #8C3B00, 0px 3px 16px 0px rgba(255, 157, 85, 0.50);    
+
+    &.orange {
+        background: linear-gradient(0deg, #FF6B00 0.8%, #FFA869 100%);
+        box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 3px 0px 0px #8C3B00, 0px 3px 16px 0px rgba(255, 157, 85, 0.50);
+
         &:hover {
             background: linear-gradient(180deg, #FF6B00 0.8%, #FFA869 100%);
-            color: var(--white);   
-        }    
+            color: var(--white);
+        }
     }
 }
