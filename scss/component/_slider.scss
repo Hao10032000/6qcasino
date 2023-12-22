@@ -219,3 +219,36 @@
         }
     }
 }
+.q6-widget-slide{
+    position: relative;
+    & .q6-slide{
+        & .q6-slide-item{
+            & .q6-image{
+                & img{
+                    position: absolute;
+                }
+            }
+            & .q6-content{
+                padding-top: 216px;
+                padding-bottom: 228px;
+                max-width: 570px;
+                width: 100%;
+                & .sub-title{
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: 29.9px;
+                    letter-spacing: 7px;
+                    color: var(--white);
+                    text-transform: uppercase;
+                    margin-bottom: -5px;
+                    display: inline-block;
+
+                }
+                & .title{
+                    margin-bottom: 12px;
+                }
+                
+            }
+        }
+    }
+}

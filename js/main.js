@@ -106,6 +106,7 @@
         $('.section-menu-left').toggleClass('active');
         $('.section-menu-left-mobile').toggleClass('active');
         $('.section-content-right').toggleClass('active');
+        $('.header-dashboard').toggleClass('active');
         $('.section-menu-left').find('.mobile-button').toggleClass('active');
       })
       $(".button-show-hide").on("click", function (e) {

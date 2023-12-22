@@ -1,18 +1,19 @@
 .wg-social {
     ul {
-        @include flex(center,start);
+        @include flex(center, start);
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 10px;
+
         li {
             a {
-                @include flex(center,center);
-                width: 46px;
-                height: 46px;
+                @include flex(center, center);
+                width: 42px;
+                height: 42px;
                 flex-shrink: 0;
                 font-size: 20px;
-                border-radius: 14px;
-                border: 1px solid rgba(255, 255, 255, 0.05);
-                background: var(--secondar);
+                border-radius: 10px;
+                border: 1px solid var(--bg1);
+                background: transparent;
             }
         }
     }

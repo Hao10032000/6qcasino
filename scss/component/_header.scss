@@ -30,6 +30,9 @@
 }
 
 .header-dashboard {
+    &.active {
+        width: calc(100% - 70px) !important;
+    }
     position: fixed;
     top: 0;
     right: 0;
@@ -64,7 +67,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 30px;
+            gap: 23px;
             & .header-coins{
                 & .bootstrap-select{
                     width: auto !important;

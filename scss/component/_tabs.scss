@@ -7,7 +7,7 @@
         flex-wrap: nowrap;
         border-radius: 10px;
         width: 100%;
-        padding: 6px 17px;
+        padding: 17px 17px;
         background-color: var(--bg1);
 
         .item-title {
@@ -28,6 +28,7 @@
                 font-size: 15px;
                 font-weight: 400;
                 line-height: 22.43px;
+                letter-spacing: 0.2px;
                 @include transition3;
 
                 & i {
@@ -51,7 +52,7 @@
             &:not(:last-child)::after{
                  content: '';
                  position: absolute;
-                 right: -25%;
+                 right: -21%;
                  height: 110%;
                  width: 1px;
                  opacity: 0.5;
