@@ -23,7 +23,6 @@
 
 .title-section {
     @include flex(center,space-between);
-    padding-bottom: 24px;
     .left {
         @include flex(center,center);
         gap: 8px;

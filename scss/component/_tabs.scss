@@ -12,7 +12,6 @@
 
         .item-title {
             @include flex(center, center);
-            height: 40px;
             padding: 9px 16px;
             gap: 8px;
             border-radius: 8px;
@@ -44,19 +43,54 @@
 
                 .inner {
                     color: var(--white);
-                    & i{
+
+                    & i {
                         color: var(--white)
                     }
                 }
             }
-            &:not(:last-child)::after{
-                 content: '';
-                 position: absolute;
-                 right: -21%;
-                 height: 110%;
-                 width: 1px;
-                 opacity: 0.5;
-                 background: linear-gradient(90deg, rgba(67, 83, 109, 0.00) 0%, #43536D 48.66%, rgba(67, 83, 109, 0.00) 100%);
+
+            &:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: -21%;
+                height: 110%;
+                width: 1px;
+                opacity: 0.5;
+                background: linear-gradient(90deg, rgba(67, 83, 109, 0.00) 0%, #43536D 48.66%, rgba(67, 83, 109, 0.00) 100%);
+            }
+        }
+    }
+}
+
+.tab-game {
+    display: inline-flex;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: var(--bg1);
+
+    & .nav-item {
+        & .nav-link {
+            padding: 9px 16px;
+            border-radius: 10px;
+            background-color: transparent;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.43px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            & i {
+                font-size: 18px;
+                color: var(--body-text);
+            }
+            &.active{
+                background-color: var(--primary);
+                & i {
+                    color: var(--white);
+                }
             }
         }
     }

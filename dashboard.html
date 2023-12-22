@@ -33,7 +33,7 @@
 
 </head>
 
-<body class="body">
+<body class="body counter-scroll">
 
     <!-- #wrapper -->
     <div id="wrapper">
@@ -881,7 +881,7 @@
                                                 <div class="tf-container mb-50">
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <div class="title-section">
+                                                            <div class="title-section mb-24">
                                                                 <div class="left">
                                                                     <div class="icon">
                                                                         <i class="icon-Frame-241"></i>
@@ -1025,7 +1025,7 @@
                                                 <div class="tf-container mb-50">
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <div class="title-section">
+                                                            <div class="title-section mb-24">
                                                                 <div class="left">
                                                                     <div class="icon">
                                                                         <i class="icon-Frame-311"></i>
@@ -1049,10 +1049,9 @@
                                                         <div class="col-12">
                                                             <div class="swiper-container" data-swiper='{
                                                                             "spaceBetween": 20,
-                                                                            "grid": {
-                                                                                "fill" : "row",
-                                                                                "rows" : 2
-                                                                            },
+                                                                            "slidesPerColumn": 2,
+                                                                            "slidesPerColumnFill": "row",
+                                                                            "slidesPerGroup": 2,
                                                                             "breakpoints": {
                                                                                "768": {
                                                                                    "slidesPerView": 2
@@ -1255,6 +1254,62 @@
                                                     </div>
                                                 </div>
                                                 <!-- /Top Game -->
+                                                <!-- /Tab Game -->
+                                                <div class="tf-container mb-50">
+                                                    <ul class="nav nav-pills mb-24 tab-game" id="pills-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link active" id="pills-biggest-tab" data-bs-toggle="pill" 
+                                                          data-bs-target="#pills-biggest" type="button" role="tab" aria-controls="pills-biggest" 
+                                                          aria-selected="true"><i class="icon-Group-3"></i>Biggest Wins</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill" 
+                                                          data-bs-target="#pills-latest" type="button" role="tab" aria-controls="pills-latest" 
+                                                          aria-selected="false"><i class="icon-Frame-321"></i>Latest wins</button>
+                                                        </li>
+                                                      </ul>
+                                                      <div class="tab-content" id="pills-tabContent">
+                                                        <div class="tab-pane fade show active" id="pills-biggest" role="tabpanel" aria-labelledby="pills-biggest-tab">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="box-video">
+                                                                        <div class="video-image">
+                                                                            <img src="images/provide/provide1.png" alt="">
+                                                                            <div class="title">pragmatic play</div>
+                                                                        </div>
+                                                                        <div class="video-content">
+                                                                            <div class="video-content-top">
+                                                                                <span class="sub-box">Rona***</span>
+                                                                                <span class="price">€26,958.768</span>
+                                                                                <p class="des">Gates of Olympus</p>
+
+                                                                            </div>
+                                                                            <a class="video-content-bottom">
+                                                                                <i class="icon-Polygon-1"></i>
+                                                                                <span>view demo</span>                                                       
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
+                                                            ...2
+                                                        </div>
+                                                      </div>
+                                                </div>
+                                                <!-- /Tab Game -->
+                                               
                                             </div>
                                             <div class="widget-content-inner">
 
