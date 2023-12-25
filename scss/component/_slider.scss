@@ -58,11 +58,7 @@
         }
     }
 }
-.btn-groups {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
+
 .button-slider-style-over {
     @include flex(center,center);
     gap: 6px;
@@ -172,7 +168,11 @@
         }
     }
 }
-
+.btn-groups {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 .image-slider {
     width: 100%;
     border-radius: 14px;
@@ -249,6 +249,22 @@
                 }
                 
             }
+        }
+    }
+}
+.providers-slide{
+    & img{
+        opacity: 0.3;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+.partner{
+    & .swiper-wrapper{
+        align-items: center;
+        & .swiper-slide{
+            width: auto !important;
         }
     }
 }

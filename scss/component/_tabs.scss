@@ -68,9 +68,12 @@
     padding: 6px;
     border-radius: 10px;
     background-color: var(--bg1);
+    gap:11px;
 
     & .nav-item {
         & .nav-link {
+
+            
             padding: 9px 16px;
             border-radius: 10px;
             background-color: transparent;
@@ -80,10 +83,10 @@
             color: var(--white);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
 
             & i {
-                font-size: 18px;
+                font-size: 23px;
                 color: var(--body-text);
             }
             &.active{

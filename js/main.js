@@ -27,7 +27,7 @@
 
   var menuleft = function () {
     if ($('div').hasClass('section-menu-left')) {
-      var bt =$(".section-menu-left").find(".has-children");
+      var bt = $(".section-menu-left").find(".has-children");
       bt.on("click", function () {
         var args = { duration: 600 };
         if ($(this).hasClass("active")) {
@@ -39,25 +39,25 @@
           $(".menu-item.has-children").removeClass("active");
           $(this).addClass("active");
         }
-    });
+      });
     }
   };
 
-  var tabs = function(){
-    $('.widget-tabs').each(function(){
-        $(this).find('.widget-content-tab').children().hide();
-        $(this).find('.widget-content-tab').children(".active").show();
-        $(this).find('.widget-menu-tab').find('li').on('click',function(){
-            var liActive = $(this).index();
-            var contentActive=$(this).siblings().removeClass('active').parents('.widget-tabs').find('.widget-content-tab').children().eq(liActive);
-            contentActive.addClass('active').fadeIn("slow");
-            contentActive.siblings().removeClass('active');
-            $(this).addClass('active').parents('.widget-tabs').find('.widget-content-tab').children().eq(liActive).siblings().hide();
-        });
+  var tabs = function () {
+    $('.widget-tabs').each(function () {
+      $(this).find('.widget-content-tab').children().hide();
+      $(this).find('.widget-content-tab').children(".active").show();
+      $(this).find('.widget-menu-tab').find('li').on('click', function () {
+        var liActive = $(this).index();
+        var contentActive = $(this).siblings().removeClass('active').parents('.widget-tabs').find('.widget-content-tab').children().eq(liActive);
+        contentActive.addClass('active').fadeIn("slow");
+        contentActive.siblings().removeClass('active');
+        $(this).addClass('active').parents('.widget-tabs').find('.widget-content-tab').children().eq(liActive).siblings().hide();
+      });
     });
   };
 
-  $('ul.dropdown-menu').on('click', function(event){
+  $('ul.dropdown-menu').on('click', function (event) {
     event.stopPropagation();
   });
 
@@ -68,24 +68,24 @@
         var $this = $(this);
         var $input = $this.closest("div").find("input");
         var value = parseInt($input.val());
-  
+
         if (value > 1) {
           value = value - 1;
         }
-  
+
         $input.val(value);
       });
-  
+
       $(".plus-btn").on("click", function (e) {
         e.preventDefault();
         var $this = $(this);
         var $input = $this.closest("div").find("input");
         var value = parseInt($input.val());
-  
+
         if (value > 0) {
           value = value + 1;
         }
-  
+
         $input.val(value);
       });
     }
@@ -112,6 +112,12 @@
       $(".button-show-hide").on("click", function (e) {
         $('.section-menu-left').toggleClass('active');
         $('.section-menu-left').find('.mobile-button').toggleClass('active');
+        $('.overlay').toggleClass('active');
+      })
+      $(".overlay").on("click", function (e) {
+        $('.section-menu-left').toggleClass('active');
+        $('.section-menu-left').find('.mobile-button').toggleClass('active');
+        $('.overlay').toggleClass('active');
       })
     }
   }
@@ -138,16 +144,40 @@
       }
     }
   };
-
+  $('.q6-read-more').click(function () {
+    $('.more-text').slideToggle();
+    // if ($('.q6-read-more').text() == "Read more") {
+    //   $(this).text("Read less")
+    // } else {
+    //   $(this).text("Read more")
+    // }
+  });
+  var swiper = new Swiper(".partner", {
+    slidesPerView: "auto",
+    spaceBetween: 50,
+    loop:true,
+    autoplay:true,
+    "breakpoints": {
+        "768": {
+            "slidesPerView": 2
+        },
+        "1200": {
+            "slidesPerView": 5
+        },
+        "1440": {
+            "slidesPerView": 7
+        }
+    },
+  });
   // Dom Ready
   $(function () {
     selectImages();
-
     menuleft();
     tabs();
     btnQuantity();
     collapse_menu();
     headerFixed();
+    swiper();
   });
 
 })(jQuery);

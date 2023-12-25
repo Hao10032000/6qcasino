@@ -87,3 +87,110 @@
     transition: background ease 0.3s;
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.70);
 }
+.header-action {
+    display: none;
+    & .header-bar{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        & .button-show-hide{
+            & .mobile-button{
+                & span{
+                    width: 25px;
+                    height: 2px;
+                    position: relative;
+                    display: inline-block;
+                    background-color: var(--white);
+                    &::before{
+                        top: -10px;
+                        position: absolute;
+                        content: '';
+                        width: 20px;
+                        height: 1px;
+                        left: 0;
+                        background-color: var(--white);
+                    }
+                    &::after{
+                        top: 10px;
+                        position: absolute;
+                        content: '';
+                        width: 15px;
+                        height: 1px;
+                        left: 0;
+                        background-color: var(--white);
+                    }
+                }
+            }
+       
+        }
+
+    }
+    & .header-logo{
+        img{
+            width: 150px;
+        }
+    }
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000000a1;
+    z-index: 11;
+    display: none;
+
+    &.active {
+        display: block !important;
+    }
+
+    & .button-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+
+        & span {
+            position: relative;
+            background: transparent;
+            cursor: pointer;
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 2px;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                -webkit-transform-origin: 50% 50%;
+                -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+                background: var(--white);
+                -webkit-transform: rotate3d(0, 0, 1, 45deg);
+                transform: rotate3d(0, 0, 1, 45deg);
+
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 2px;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                -webkit-transform-origin: 50% 50%;
+                -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+                background: var(--white);
+                -webkit-transform: rotate3d(0, 0, 1, -45deg);
+                transform: rotate3d(0, 0, 1, -45deg);
+            }
+        }
+    }
+}

@@ -46,21 +46,39 @@
                 left: 0;
                 opacity: 1;
                 visibility: visible;
-                &::after {
-                    position: fixed;
-                    content: '';
-                    top: 0;
-                    left: 0;
-                    width: 340px;
-                    height: 80px;
-                    background: var(--backdrop);
-                    z-index: 40;
-                }
+                // &::after {
+                //     position: fixed;
+                //     content: '';
+                //     top: 0;
+                //     left: 0;
+                //     width: 340px;
+                //     height: 80px;
+                //     background: var(--backdrop);
+                //     z-index: 40;
+                // }
             }
             .button-show-hide {
                 display: block;
             }
         }
+    }
+    .header-dashboard {
+        width: 100%;
+    }
+    .header-action{
+        display: block !important;
+    }
+    .search-top{
+        display: none !important;
+    }
+    .header-dashboard.active {
+        width: 100% !important;
+    }
+    .section-menu-left > .box-logo .button-collapse-menu {
+        display: none;
+    }
+    .panel{
+        display: flex !important;
     }
 }
 
