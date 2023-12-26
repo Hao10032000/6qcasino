@@ -152,7 +152,37 @@
     //   $(this).text("Read more")
     // }
   });
-  
+  $(".btn-top-group .q6-sc ").on("click", function (e) {
+    $('.model-sign-in').toggleClass('show');
+  })
+  $(".btn-close-model ").on("click", function (e) {
+    $('.model-sign-in').toggleClass('show');
+  })
+  //reloader
+  var preloader = function () {
+    setTimeout(function () {
+      $(".preload-container").fadeOut("slow", function () {
+        $(this).remove();
+      });
+    }, 1000);
+  };
+  //goTop
+  var goTop = function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 800) {
+        $('.button-go').addClass('show');
+      } else {
+        $('.button-go').removeClass('show');
+      }
+    });
+
+    $('.button-go').on('click', function () {
+      $("html, body").animate({ scrollTop: 0 }, 1000);
+      return false;
+    });
+  }; //goTop
+
+
   // Dom Ready
   $(function () {
     selectImages();
@@ -161,6 +191,9 @@
     btnQuantity();
     collapse_menu();
     headerFixed();
+    preloader();
+    goTop();
+
   });
 
 })(jQuery);

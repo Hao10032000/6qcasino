@@ -756,3 +756,84 @@
         }
     }
 }
+/* preload */
+/* -------------------------------- */
+.preload-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999999999999999;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+}
+
+.preload-container .middle {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 100;
+    margin: -30px 0 0 -30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: url(/images/logo.png);
+    animation: preload 1.2s linear infinite alternate;
+}
+/* Scroll Top
+-------------------------------------------------------------- */
+.button-go {
+    position: fixed;
+    display: block;
+    width: 47px;
+    height: 47px;
+    line-height: 47px;
+    border-radius: 6px;
+    text-align: center;
+    z-index: 999;
+    right: 25px;
+    bottom: 30px;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.button-go.show {
+    right: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.button-go::before,
+.button-go::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.button-go::before {
+    z-index: -1;
+    background-color: var(--primary);
+}
+
+.button-go::after {
+    content: "\e960";
+    font-family: "icomoon";
+    font-size: 10px;
+    color: $white;
+    font-weight: 600;
+    rotate: -135deg;
+}
+
+.button-go:hover {
+    transform: translateY(-3px);
+}
