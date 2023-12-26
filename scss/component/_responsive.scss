@@ -125,10 +125,17 @@
             padding-left: 0;
         }
     }
+    .nav-list-item {
+        width: 33.333%;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 767px) {
-
+    .q6-sc {
+        padding: 4.5px 15px;
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -148,6 +155,9 @@
                 }
             }
         }
+    }
+    .nav-list-item {
+        width: 100% !important;
     }
     .wg-partners {
         .content-1,
@@ -249,4 +259,14 @@
             }
         }
     }
+}
+@media (max-width: 480px) {
+   
+
+}
+@media (max-width: 414px) {
+    .panel .panel-item .panel-link {
+        font-size: 13px;
+    }
+
 }

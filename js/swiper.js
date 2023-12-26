@@ -25,4 +25,21 @@ var sliderinit = function() {
     });
     }
 }
+var swiper = new Swiper(".partner", {
+    slidesPerView: "auto",
+    spaceBetween: 50,
+    loop:true,
+    autoplay:true,
+    "breakpoints": {
+        "768": {
+            "slidesPerView": 2
+        },
+        "1200": {
+            "slidesPerView": 5
+        },
+        "1440": {
+            "slidesPerView": 7
+        }
+    },
+  });
 sliderinit();
