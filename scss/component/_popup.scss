@@ -16,10 +16,12 @@
     width: 100%;
     display: none;
     opacity: 0;
-    &.show{
+
+    &.show {
         display: flex !important;
         opacity: 1;
     }
+
     & .modal-wrap {
         position: relative;
         max-width: 1000px;
@@ -178,12 +180,13 @@
                             padding: 19px 52px;
                         }
 
-                        & > svg {
+                        &>svg {
                             position: absolute;
                             left: 20px;
                             top: 50%;
                             transform: translateY(-50%);
                         }
+
                         & .toggle-password {
                             position: absolute;
                             right: 20px;
@@ -271,7 +274,6 @@
     }
 }
 
-
 .btn-close-model {
     position: absolute;
     right: 20px;
@@ -280,7 +282,8 @@
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s;
-    &:hover{
+
+    &:hover {
         rotate: 90deg;
     }
 
@@ -324,4 +327,85 @@
             transform: rotate3d(0, 0, 1, -45deg);
         }
     }
+}
+
+// Model search
+.modal-search {
+    & .modal-dialog {
+        max-width: 1110px !important;
+        margin: 50px auto !important;
+
+        & .search-modal-games {
+            padding: 16px;
+            border-radius: 10px;
+
+            & .search-game-static {
+                & .input-left-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+
+                    & svg {
+                        position: absolute;
+                        left: 0px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    & .input-native {
+                        height: 20px;
+                        padding: 0px 30px;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 22.43px;
+                        border: unset;
+                        background: transparent;
+                        border-radius: unset;
+                    }
+
+                    & .button-search {
+                        width: 20%;
+                        flex-shrink: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 7px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.selec-game-search {
+    & .left {
+        & .title {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26.91px;
+            color: var(--body-text);
+        }
+    }
+
+    & .btn-groups {
+
+        & .swiper-button-prev,
+        .swiper-button-next {
+            border: 1px solid rgba(85, 101, 126, 0.14);
+        }
+    }
+
+    & .box-offer-item {
+        & .title {
+            bottom: 6px;
+            font-size: 5px;
+        }
+    }
+}
+
+.modal-backdrop {
+    background: rgba(41, 34, 136, 0.50) !important;
+    backdrop-filter: blur(2px);
 }
