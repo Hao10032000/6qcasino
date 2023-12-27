@@ -408,4 +408,7 @@
 .modal-backdrop {
     background: rgba(41, 34, 136, 0.50) !important;
     backdrop-filter: blur(2px);
+    &.show{
+        opacity: 1;
+    }
 }

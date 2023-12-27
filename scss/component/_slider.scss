@@ -4,17 +4,20 @@
         .swiper-wrapper {
             padding-bottom: 20px;
         }
+
         .bottom {
-            @include flex(center,center);
+            @include flex(center, center);
             gap: 8px;
 
-            > div {
+            >div {
                 position: unset;
             }
+
             .swiper-button-prev {
                 width: 20px;
                 height: 20px;
                 margin: 0;
+
                 &::after {
                     font-family: $fontIcon;
                     content: '\ea40';
@@ -22,16 +25,19 @@
                     color: var(--Note);
                     @include transition3;
                 }
+
                 &:hover {
                     &::after {
                         color: var(--primary);
                     }
                 }
             }
+
             .swiper-button-next {
                 width: 20px;
                 height: 20px;
                 margin: 0;
+
                 &::after {
                     font-family: $fontIcon;
                     content: '\ea3c';
@@ -39,17 +45,21 @@
                     color: var(--Note);
                     @include transition3;
                 }
+
                 &:hover {
                     &::after {
                         color: var(--primary);
                     }
                 }
             }
+
             .swiper-pagination {
-                @include flex(center,center);
+                @include flex(center, center);
                 gap: 6px;
+
                 span {
                     background: var(--Note);
+
                     &.swiper-pagination-bullet-active {
                         background: var(--liner-primary);
                     }
@@ -60,11 +70,13 @@
 }
 
 .button-slider-style-over {
-    @include flex(center,center);
+    @include flex(center, center);
     gap: 6px;
-    > div {
+
+    >div {
         position: unset;
     }
+
     .swiper-button-prev {
         width: 32px;
         height: 32px;
@@ -72,6 +84,7 @@
         border-radius: 50%;
         border: 1px solid var(--bg-white);
         background: transparent;
+
         &::after {
             font-family: $fontIcon;
             content: '\e960';
@@ -80,13 +93,16 @@
             @include transition3;
             rotate: 132deg;
         }
+
         &:hover {
             &::after {
                 color: var(--primary);
             }
+
             border: 1px solid var(--primary);
         }
     }
+
     .swiper-button-next {
         width: 32px;
         height: 32px;
@@ -94,6 +110,7 @@
         border-radius: 50%;
         border: 1px solid var(--bg-white);
         background: transparent;
+
         &::after {
             font-family: $fontIcon;
             content: '\e960';
@@ -102,24 +119,30 @@
             @include transition3;
             rotate: -50deg;
         }
+
         &:hover {
             &::after {
                 color: var(--primary);
             }
+
             border: 1px solid var(--primary);
         }
     }
+
     .swiper-pagination {
-        @include flex(center,center);
+        @include flex(center, center);
         gap: 6px;
+
         span {
             background: var(--text);
+
             &.swiper-pagination-bullet-active {
                 background: var(--primary);
             }
         }
     }
 }
+
 .swiper-button-style-arrow {
     &.swiper-button-prev {
         top: 50.7%;
@@ -130,6 +153,7 @@
         background: var(--backdrop);
         margin: 0;
         @include transition3;
+
         &::after {
             font-family: $fontIcon;
             content: '\e930';
@@ -137,13 +161,16 @@
             color: var(--Note);
             @include transition3;
         }
+
         &:hover {
             background: var(--Note);
+
             &::after {
                 color: var(--backdrop);
             }
         }
     }
+
     &.swiper-button-next {
         top: 52%;
         right: -74px;
@@ -153,6 +180,7 @@
         background: var(--backdrop);
         margin: 0;
         @include transition3;
+
         &::after {
             font-family: $fontIcon;
             content: '\e925';
@@ -160,32 +188,39 @@
             color: var(--Note);
             @include transition3;
         }
+
         &:hover {
             background: var(--Note);
+
             &::after {
                 color: var(--backdrop);
             }
         }
     }
 }
+
 .btn-groups {
     display: flex;
     align-items: center;
     gap: 16px;
 }
+
 .image-slider {
     width: 100%;
     border-radius: 14px;
     overflow: hidden;
+
     img {
         width: 100%;
         @include transition3;
     }
+
     &:hover {
         img {
-            transform: scale(1.1);  
+            transform: scale(1.1);
         }
     }
+
     &.t1 {
         img {
             width: 100%;
@@ -204,13 +239,16 @@
     border-radius: 14px;
     background: var(--secondary);
     box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.06) inset;
+
     .bot {
         @include d-flex;
         gap: 6px;
+
         i {
             font-size: 20px;
             color: var(--Note);
         }
+
         .number {
             color: var(--Body-Text);
             font-size: 13px;
@@ -219,21 +257,26 @@
         }
     }
 }
-.q6-widget-slide{
+
+.q6-widget-slide {
     position: relative;
-    & .q6-slide{
-        & .q6-slide-item{
-            & .q6-image{
-                & img{
+
+    & .q6-slide {
+        & .q6-slide-item {
+            & .q6-image {
+                & img {
                     position: absolute;
+                    width: 100%;
                 }
             }
-            & .q6-content{
+
+            & .q6-content {
                 padding-top: 216px;
                 padding-bottom: 228px;
                 max-width: 570px;
                 width: 100%;
-                & .sub-title{
+
+                & .sub-title {
                     font-size: 20px;
                     font-weight: 800;
                     line-height: 29.9px;
@@ -244,26 +287,49 @@
                     display: inline-block;
 
                 }
-                & .title{
+
+                & .title {
                     margin-bottom: 12px;
                 }
-                
+
+            }
+
+            & .v2 {
+                padding-top: 180px;
+                padding-bottom: 240px;
+                max-width: 622px;
+                & .title {
+                    margin-bottom: 18px;
+                }
+                & .des-slide{
+                    color: var(--text);
+                    margin-bottom: 45px;
+                }
+                & .q6-button-large {
+                    padding: 12px 30px 12px 30px;
+                }
+
+
             }
         }
     }
 }
-.providers-slide{
-    & img{
+
+.providers-slide {
+    & img {
         opacity: 0.3;
-        &:hover{
+
+        &:hover {
             opacity: 1;
         }
     }
 }
-.partner{
-    & .swiper-wrapper{
+
+.partner {
+    & .swiper-wrapper {
         align-items: center;
-        & .swiper-slide{
+
+        & .swiper-slide {
             width: auto !important;
         }
     }
