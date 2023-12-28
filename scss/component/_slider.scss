@@ -298,18 +298,51 @@
                 padding-top: 180px;
                 padding-bottom: 240px;
                 max-width: 622px;
+
                 & .title {
                     margin-bottom: 18px;
                 }
-                & .des-slide{
+
+                & .des-slide {
                     color: var(--text);
                     margin-bottom: 45px;
                 }
+
                 & .q6-button-large {
                     padding: 12px 30px 12px 30px;
                 }
 
 
+            }
+
+            & .v3 {
+                padding-top: 200px;
+                padding-bottom: 220px;
+                max-width: 500px;
+
+                & .title {
+                    margin-bottom: 17px;
+                }
+
+                & .des-slide {
+                    margin-bottom: 67px;
+                    color: var(--text);
+                }
+
+                & .btn-slide {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+
+                    & .q6-sc {
+                        font-size: 22px;
+                        font-weight: 600;
+                        line-height: 30.8px;
+                        padding: 12.5px 15px;
+                        max-width: 219px;
+                        width: 100%;
+                    }
+                }
             }
         }
     }

@@ -149,6 +149,12 @@
     $('.providers-seo').toggleClass('show-overlay');
     
   });
+  $('.description-block-buttons').click(function () {
+    $('.description-collapse').slideToggle();
+    $('.widget-terms').toggleClass('show-overlay');
+    
+  });
+
   $(".btn-top-group .q6-sc ").on("click", function (e) {
     $('.model-sign-in').toggleClass('show');
   })

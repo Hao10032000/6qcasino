@@ -136,6 +136,9 @@
         padding: 4.5px 15px;
         font-size: 13px;
     }
+    .deposit{
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -155,6 +158,9 @@
                 }
             }
         }
+    }
+.header-currency .image-select {
+        width: 90px !important;
     }
     .nav-list-item {
         width: 100% !important;

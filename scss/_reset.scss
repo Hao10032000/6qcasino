@@ -771,7 +771,12 @@ h6,
 .mt-114 {
     margin-top: 114px;
 }
-
+.mt--109{
+    margin-top: -109px;
+}
+.m-b30 {
+    margin-bottom: 30px;
+}
 .m-b34 {
     margin-bottom: 34px;
 }
@@ -819,6 +824,12 @@ h6,
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.text-black{
+    color: var(--bg) !important;
+}
+.t-a-center{
+    text-align: center;
 }
 
 .line-search {

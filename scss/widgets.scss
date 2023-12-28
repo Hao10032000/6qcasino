@@ -670,6 +670,7 @@
         right: 0;
         z-index: 1;
     }
+
     &.show-overlay:before {
         background: linear-gradient(180deg, rgba(8, 9, 13, 0.00) 0%, #08090D 100%);
         position: absolute;
@@ -763,11 +764,13 @@
         border-radius: 100px;
         margin-top: -25px;
         font-size: 22px;
-        &:hover{
+
+        &:hover {
             color: var(--white);
         }
     }
 }
+
 /* preload */
 /* -------------------------------- */
 .preload-container {
@@ -792,6 +795,7 @@
     content: url(/images/logo.png);
     animation: preload 1.2s linear infinite alternate;
 }
+
 /* Scroll Top
 -------------------------------------------------------------- */
 .button-go {
@@ -850,10 +854,506 @@
     transform: translateY(-3px);
 }
 
-//benefit
+//VIP benefit
 .vip-benefits {
     background-color: var(--box-benefit);
     padding: 30px 30px 30px 50px;
     border-radius: 10px;
     display: flex;
+    gap: 60px;
+    align-items: center;
+
+    & .vip-benefits-list {
+        display: flex;
+        gap: 40px;
+        flex: 1;
+        flex-wrap: nowrap;
+
+        & .benefits-list-item {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            padding: 0 8px;
+            width: 25%;
+            position: relative;
+
+            &:not(:first-child):before {
+                background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .12) 48.96%, hsla(0, 0%, 100%, 0));
+                content: "";
+                height: 100%;
+                left: -20px;
+                position: absolute;
+                top: 0;
+                width: 1px;
+            }
+
+            &:hover img {
+                transform: rotateY(180deg);
+            }
+
+            & .benefit-icon {
+                & img {
+                    width: 70px;
+                    -webkit-transition: all 0.6s ease;
+                    -moz-transition: all 0.6s ease;
+                    -ms-transition: all 0.6s ease;
+                    -o-transition: all 0.6s ease;
+                    transition: all 0.6s ease;
+                }
+            }
+
+            & .benefit-content {
+                & .benefit-title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 29.9px;
+                    color: var(--white);
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    & .vip-benefits-content {
+        flex: 0 0 158px;
+        max-width: 158px;
+        position: relative;
+
+        &::after {
+            background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .12) 48.96%, hsla(0, 0%, 100%, 0));
+            content: "";
+            height: 100%;
+            right: -30px;
+            position: absolute;
+            top: 0;
+            width: 1px;
+        }
+    }
+}
+
+//VIP Passess
+.vip-card {
+
+    background-color: var(--box-benefit);
+    border-radius: 10px;
+    border: 1px solid rgba(147, 172, 211, 0.10);
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.70);
+    height: 100%;
+
+    & .vip-card-front {
+        & .vip-card-content {
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 36px 65px 20px 20px;
+            position: relative;
+            min-height: 188px;
+
+            & .vip-card-bg {
+                position: absolute;
+                height: 100%;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            & .vip-card-btn-info {
+                color: rgba(20, 20, 26, .4);
+                font-size: 20px;
+                padding: 0;
+                position: absolute;
+                right: 11px;
+                top: 8px;
+                z-index: 1;
+                cursor: pointer;
+            }
+
+            & .vip-card-title {
+                z-index: 1;
+            }
+
+            & .vip-card-grade {
+                z-index: 1;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 22.43px;
+                color: var(--white);
+                margin-bottom: -2px;
+            }
+
+            & .vip-card-name {
+                font-size: 10px;
+                font-weight: 900;
+                z-index: 1;
+                line-height: 14.95px;
+                letter-spacing: 15px;
+                color: var(--live);
+                position: absolute;
+                bottom: 21px;
+            }
+
+            & .vip-card-icon {
+                bottom: 11px;
+                height: auto;
+                position: absolute;
+                right: 9px;
+                width: 44px;
+                z-index: 1;
+            }
+        }
+
+        & .vip-card-bottom-content {
+            padding: 30px 30px 27px 30px;
+
+            & .vip-card-bottom-title {
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 22.43px;
+                text-transform: uppercase;
+                color: var(--body-text);
+                margin-bottom: 15px;
+            }
+
+            & .vip-card-bottom-text {
+                color: var(--text);
+            }
+
+            & .vip-card-bottom-list {
+                padding-left: 22px;
+
+                & li {
+                    color: var(--text);
+                    line-height: 22.43px;
+                    list-style: disc;
+
+                }
+            }
+        }
+    }
+}
+
+.title-passes {
+    line-height: 58px;
+}
+
+//Table glance
+.table-glance-wrapper {
+    & .table-vip {
+        border-radius: 10px;
+
+        & tbody {
+            & tr {
+                height: 76.2px;
+
+                &:nth-of-type(1) th:first-child {
+                    border-radius: 10px 0 0 0;
+                    word-break: break-word;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 22.43px;
+                    color: var(--text);
+                }
+
+                &:nth-of-type(1) th:last-child {
+                    border-radius: 0 10px 0 0;
+                }
+
+                &:last-child td:first-child {
+                    border-radius: 0 0 0 10px;
+                }
+
+                &:last-child td:last-child {
+                    border-radius: 0 0 10px 0;
+                }
+
+                & th {
+                    vertical-align: middle;
+                    padding: 8px 16px;
+
+                    &:first-child {
+                        width: 209px;
+                        text-align: left !important;
+                        background-color: var(--box-benefit);
+                    }
+
+                    & .table-top-name {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        justify-content: center;
+                        color: var(--text);
+                        font-size: 15px;
+                        font-weight: 500;
+
+                        & img {
+                            width: 46px;
+                            border-radius: 4px;
+                            border: 1px solid #2C2C2C;
+                        }
+                    }
+                }
+
+                & td {
+                    text-align: center !important;
+                    vertical-align: middle;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 22.43px;
+                    color: #93ACD3;
+                    padding: 8px 10px 8px 15px;
+
+
+                    &:first-child {
+                        text-align: left !important;
+                        background-color: var(--box-benefit);
+                    }
+
+                    & .table-name {
+                        display: flex;
+                        gap: 12px;
+                        justify-content: space-between;
+                        word-break: break-word;
+                        font-size: 15px;
+                        font-weight: 600;
+                        line-height: 22.43px;
+                        color: var(--text);
+
+                        & .tooltip-info-info-btn {
+                            cursor: pointer;
+                            margin-top: -7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Instant Cart Vip
+.instant-card {
+    padding: 30px 30px 27px 30px;
+    background-color: var(--box-benefit);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .filter {
+        transform: rotateY(180deg);
+    }
+
+    & .instant-cart-wrap {
+        & .instant-card-img {
+            margin-bottom: 30px;
+
+            & .fill {
+                filter: blur(50px);
+                width: 25% !important;
+                height: auto;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 0;
+            }
+
+            & .filter {
+                width: 70px;
+                z-index: 1;
+                position: relative;
+                -webkit-transition: all 0.6s ease;
+                -moz-transition: all 0.6s ease;
+                -ms-transition: all 0.6s ease;
+                -o-transition: all 0.6s ease;
+                transition: all 0.6s ease;
+            }
+        }
+
+        & .instant-card-content {
+            & .instant-card-title {
+                font-size: 24px;
+                line-height: 35.88px;
+                margin-bottom: 10px;
+            }
+
+            & p {
+                color: var(--text);
+
+                span {
+                    color: #FF9548;
+                }
+            }
+
+            & .list-cart {
+                & li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+
+                    & .number {
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 35.88px;
+                        color: var(--white);
+                        height: 35px;
+                        width: 35px;
+                        padding: 0 12px;
+                        border-radius: 100%;
+                        background: var(--bg4);
+                        box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px -2px 4px 0px rgba(104, 93, 255, 0.18) inset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Terms
+.widget-terms {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--box-benefit);
+    position: relative;
+
+    &:before {
+        background: linear-gradient(180deg, rgba(16, 19, 34, 0.00) 0%, #101322 100%);
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 96px;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    &.show-overlay:before {
+        background: linear-gradient(180deg, rgba(16, 19, 34, 0.00) 0%, #101322 100%);
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 96px;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: none;
+    }
+
+    & .description-preview {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+
+        & .title-section {
+            justify-content: flex-start;
+            gap: 8px;
+
+            & h3 {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 35.88px;
+            }
+
+            & i {
+                font-size: 25px;
+            }
+        }
+
+        & ul {
+            padding-left: 42px;
+
+            & li {
+                list-style: disc;
+
+                &:not(:last-child) {
+                    margin-bottom: 9px;
+                }
+
+                & p {
+                    & strong {
+                        font-size: 15px;
+                        font-weight: 600;
+                        line-height: 22.43px;
+                        color: var(--text);
+                    }
+                }
+            }
+        }
+
+    }
+
+    & .description-collapse {
+        gap: 24px;
+        position: relative;
+        display: none;
+        margin-top: 10px;
+
+        & p {
+            margin-bottom: 10px;
+        }
+    }
+
+    & .description-block-buttons {
+        margin-top: 18px;
+    }
+}
+
+//Mobie app
+.mobie-app {
+    padding: 12px 24px;
+    background-color: var(--bg1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .device {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & span {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 29.9px;
+            color: var(--text);
+        }
+    }
+
+    & .drive-group {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        & li {
+            &:not(:last-child)::before {
+                position: absolute;
+                content: '';
+                right: -20px;
+                height: 100%;
+                width: 1px;
+                opacity: 0.4;
+                background: linear-gradient(90deg, rgba(67, 83, 109, 0.00) 0%, #43536D 48.66%, rgba(67, 83, 109, 0.00) 100%);
+            }
+            position: relative;
+            & i {
+                font-size: 26px;
+                color: var(--body-text);
+            }
+        }
+    }
 }
