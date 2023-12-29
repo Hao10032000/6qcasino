@@ -344,6 +344,29 @@
                     }
                 }
             }
+
+            & .v4 {
+                padding-top: 200px;
+                padding-bottom: 265px;
+                max-width: 600px;
+                width: 100%;
+                
+                & .title {
+                    margin-bottom: 14px;
+                }
+
+                & .des-slide {
+                    margin-bottom: 46px;
+                    padding-right: 12px;
+                    color: var(--text);
+                }
+                & .btn-slide{
+                    & .q6-button-large{
+                        padding: 12px 34px 12px 34px;
+                    }
+                }          
+            }
+
         }
     }
 }
