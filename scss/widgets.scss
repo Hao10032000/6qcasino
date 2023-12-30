@@ -1038,7 +1038,7 @@
     line-height: 58px;
 }
 
-.title {
+.title-main {
     text-align: center;
 }
 
@@ -1740,6 +1740,7 @@
     }
 
 }
+
 // Terms
 .widget-terms {
     & .v2 {
@@ -1763,8 +1764,9 @@
         }
     }
 }
+
 // Ticket
-.lottery-ticket{
+.lottery-ticket {
     & .ticket-header {
         padding: 0px 15px;
         border-radius: 10px;
@@ -1772,94 +1774,118 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        & .ticket-sold{
+
+        & .ticket-sold {
             position: relative;
-            & > img {
+
+            &>img {
                 position: absolute;
             }
-            & .ticket1{
+
+            & .ticket1 {
                 right: -50px;
                 top: 30%;
             }
-            & .ticket2{
+
+            & .ticket2 {
                 left: -15px;
                 bottom: -10%;
-                
+
             }
-            & .ticket3{
+
+            & .ticket3 {
                 top: -17px;
                 left: 61%;
-                
+
             }
-            & .ticket4{
+
+            & .ticket4 {
                 bottom: -14px;
-                right: -3%;             
+                right: -3%;
             }
-            & .ticket5{
+
+            & .ticket5 {
                 top: 14px;
                 left: 15px;
             }
-            & .ticket6{
+
+            & .ticket6 {
                 left: 28%;
-                bottom: 13px;         
+                bottom: 13px;
             }
-            & .ticket7{
+
+            & .ticket7 {
                 bottom: 10px;
                 left: 47%;
             }
-            & .ticket8{
+
+            & .ticket8 {
                 top: 20px;
                 right: 23%;
             }
+
             & .sold-wrap {
                 display: flex;
                 align-items: center;
                 gap: 8px;
+
                 & img {
                     margin-top: -22px;
                     margin-left: 12px;
                 }
-                & span{
+
+                & span {
                     margin-left: 3px;
                 }
             }
         }
-        & .ticket-button{
+
+        & .ticket-button {
             .q6-sc {
                 padding: 12px 23px;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 22.6px;
-                & i{
+
+                & i {
                     margin-left: 4px;
                 }
             }
         }
     }
+
     & .ticket-content-wrap {
         padding: 87px 37.5px 0px 37.5px;
         border-radius: 30px;
         border: 1px solid rgba(147, 172, 211, 0.00);
         background: linear-gradient(180deg, rgba(9, 10, 14, 0.00) 0%, #0B0F18 100%);
+        background-image: url(/images/page/bg-mask.png);
         box-shadow: 0px 24px 30px 0px rgba(0, 0, 0, 0.70);
         display: flex;
         gap: 22px;
-        & > img {
+
+        &>img {
             max-width: 507px;
         }
-        & .ticket-content{
+
+        & .ticket-content {
             position: relative;
             padding-top: 80px;
-            & .ticket-section-title{
+
+            & .ticket-section-title {
                 margin-bottom: 63px;
-                & .title-ticket{
+
+                & .title-ticket {
                     margin-bottom: 20px;
                 }
             }
+
             & .ticket {
                 display: flex;
-                & .ticket-left{
+
+                & .ticket-left {
                     position: relative;
+
                     & .lottery-ticket-inner {
                         display: flex;
                         flex-direction: column;
@@ -1871,21 +1897,26 @@
                         align-items: center;
                         text-align: center;
                         width: 100%;
-                        & .text-amount{
+
+                        & .text-amount {
                             line-height: 55px;
                         }
-                        & .text-deposit{
+
+                        & .text-deposit {
                             color: var(--white);
                             margin-top: -5px;
                         }
-                        & .lottery-ticket-text{
+
+                        & .lottery-ticket-text {
                             color: var(--white);
                         }
                     }
                 }
-                & .ticket-right{
+
+                & .ticket-right {
                     position: relative;
-                    & .lottery-ticket-right{
+
+                    & .lottery-ticket-right {
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
@@ -1896,19 +1927,23 @@
                         align-items: center;
                         text-align: center;
                         width: 100%;
-                        & .text-amount{
+
+                        & .text-amount {
                             line-height: 55px;
                         }
-                        & .text-deposit{
+
+                        & .text-deposit {
                             color: var(--white);
                         }
                     }
-                    & .ticket-r-1{
+
+                    & .ticket-r-1 {
                         position: absolute;
                         top: 17%;
                         left: 41%;
                     }
-                    & .ticket-r-2{
+
+                    & .ticket-r-2 {
                         position: absolute;
                         bottom: 15%;
                         left: 41%;
@@ -1916,40 +1951,49 @@
 
                 }
             }
-            & > img{
+
+            &>img {
                 position: absolute;
             }
-            & .shape-ticket1{
+
+            & .shape-ticket1 {
                 left: -30%;
                 bottom: 17%;
             }
-            & .shape-ticket2{
+
+            & .shape-ticket2 {
                 left: -19%;
                 top: 27%;
             }
-            & .shape-ticket3{
+
+            & .shape-ticket3 {
                 right: -15%;
                 top: 45%;
             }
-            & .shape-ticket4{
+
+            & .shape-ticket4 {
                 top: 23.5%;
                 right: 43%;
-                
+
             }
-            & .shape-ticket5{
+
+            & .shape-ticket5 {
                 right: 31%;
                 bottom: 21%;
             }
-            & .shape-ticket6{
+
+            & .shape-ticket6 {
                 right: -34%;
                 top: 16%;
-                
+
             }
-            & .shape-ticket7{
+
+            & .shape-ticket7 {
                 left: 17%;
                 bottom: 34%;
             }
-            & .shape-ticket8{
+
+            & .shape-ticket8 {
                 right: -23%;
                 bottom: 16%;
             }
@@ -1957,6 +2001,234 @@
 
         }
     }
-    
-    
+
+
+}
+
+// Promotoins
+.title-section-promotoins {
+    & h2 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    & p {
+        max-width: 492px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.promotoins-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.promotoins-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &:hover img {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+        -webkit-transition: all 0.7s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.7s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    & .promotoins-image {
+        & img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            -webkit-transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+            transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+
+        }
+    }
+
+    & .tag {
+        position: absolute;
+        z-index: 1;
+        top: 30px;
+        left: 40px;
+
+        & span {
+            padding: 7px 10px;
+            border-radius: 5px;
+            background: linear-gradient(0deg, #0C5EFF 0.8%, #1398F9 100%), linear-gradient(314deg, #F50 27.39%, #FFA071 84.85%);
+            box-shadow: 0px 3px 28px 0px rgba(34, 131, 246, 0.40), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 2.5px 0px 0px #003293;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 13.62px;
+            color: var(--white);
+            display: inline-block;
+        }
+    }
+
+    & .promotoins-car-inner {
+        position: relative;
+        padding: 123px 41px 38px 41px;
+        max-width: 520px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 41px;
+        z-index: 2;
+        height: 100%;
+
+        & .promotoins-card-content {
+
+            & .promotoins-subtitle {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 35.88px;
+                color: var(--white);
+                text-transform: uppercase;
+                margin-bottom: 16px;
+                display: inline-block;
+
+            }
+        }
+
+        & .promotoins-card-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+
+            .q6-sc {
+                padding: 12.5px 10px;
+                font-size: 16px;
+                font-weight: 600;
+                max-width: 156px;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+
+.violet-promotoins:before .red-promotoins,
+.yellow-promotoins {
+    position: relative;
+}
+
+.red-promotoins:before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #800519 0%, rgba(128, 5, 25, 0.00) 100%);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.violet-promotoins:before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #342241 0%, rgba(52, 34, 65, 0.00) 100%);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.yellow-promotoins:before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #946D4E 0%, rgba(148, 109, 78, 0.00) 100%);
+    border-radius: 10px 0px 0px 10px;
+}
+
+//faq
+.faq-wrap-content {
+    & .faq-item {
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+        & .title-wrap {
+            padding: 15.8px 15px;
+            background-color: #101623;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            & .faq-title {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                & p{
+                    color: var(--text);
+                }
+            }
+
+            & .pl-mi {
+                & .icon-plus {
+                    height: 14px;
+                    min-width: 20px;
+                    position: relative;
+                    width: 14px;
+                    display: flex;
+
+                    &:before {
+                        background: var(--text);
+                        border-radius: 100px;
+                        content: "";
+                        height: 2px;
+                        left: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: transform .3s ease;
+                        width: 15.5px;
+                    }
+
+                    &:after {
+                        background: var(--text);
+                        border-radius: 100px;
+                        content: "";
+                        height: 2px;
+                        left: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: transform .3s ease;
+                        width: 15.5px;
+                        transform: translate(-50%,-50%) rotate(90deg);
+                    }
+                }
+
+            }
+        }
+        & .faq-content{
+            padding: 12px 46px;
+            display: none;
+            &.show{
+                display: block !important;
+            }
+        }
+    }
 }

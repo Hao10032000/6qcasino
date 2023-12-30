@@ -98,3 +98,11 @@
         }
     }
 }
+.tab-faq{
+    padding: 5px 17px !important;
+    & li{
+        &::after{
+            display: none;
+        }
+    }
+}

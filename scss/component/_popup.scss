@@ -404,11 +404,147 @@
         }
     }
 }
-
+// Model Backdrop
 .modal-backdrop {
-    background: rgba(41, 34, 136, 0.50) !important;
+    background: rgba(8, 9, 13, 0.75);
     backdrop-filter: blur(2px);
-    &.show{
+
+    &.show {
         opacity: 1;
     }
+}
+// Model promotoins
+.model-promotoins{
+    & .modal-dialog-centered {
+        max-width: 710px;
+        width: 100%;
+       
+        & .modal-content{
+            border-radius: 25px;
+        }
+        & .modal-content-promotoins {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            background-color: var(--bg1);
+            border-radius: 20px;
+            box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.80);
+            position: relative;
+            & .btn-close {
+                background: url(/images/page/closex.png) center/1em auto no-repeat;   
+                opacity: 1;
+                position: absolute;
+                padding: 8px;
+                background-color: rgba(0, 0, 0, 0.50);
+                border-radius: 100%;
+                right: 40px;
+                top: 40px;
+                z-index: 1;
+            }
+            & .image-modal-promotoins{
+                position: relative;
+                overflow: hidden;
+                & .promotoins-image{
+                    & img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                        z-index: 0;
+                    }
+                }
+                & .tag {
+                    position: absolute;
+                    z-index: 1;
+                    top: 40px;
+                    left: 30px;
+                    & span {
+                        padding: 7px 10px;
+                        border-radius: 5px;
+                        background: linear-gradient(0deg, #0C5EFF 0.8%, #1398F9 100%), linear-gradient(314deg, #F50 27.39%, #FFA071 84.85%);
+                        box-shadow: 0px 3px 28px 0px rgba(34, 131, 246, 0.40), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 2.5px 0px 0px #003293;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 13.62px;
+                        color: var(--white);
+                        display: inline-block;
+                    }
+                }
+                & .promotoins-car-inner {
+                    position: relative;
+                    padding: 193px 30px 30px 30px;
+                    max-width: 500px;
+                    width: 100%;
+                    z-index: 2;
+                    & .promotoins-subtitle {
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 35.88px;
+                        color: var(--white);
+                        text-transform: uppercase;
+                        margin-bottom: 16px;
+                        display: inline-block;
+                
+                    }
+                }
+            }
+            & .card-modal-list{
+                & ol {
+                    padding-left: 49px;
+                    margin-top: -4px;
+                    & li{
+                        list-style: decimal;
+                        position: relative;
+                        & p {
+                            color: var(--text);
+
+                        }
+                        &:not(:last-child){
+                            margin-bottom: 18px;
+                        }
+                        &::marker{
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 29.9px;
+                            color: var(--white);
+                            height: 35px;
+                            width: 35px;
+                            padding: 0 12px;
+                            border-radius: 100%;
+                            background: var(--bg4);
+                            box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px -2px 4px 0px rgba(104, 93, 255, 0.18) inset;
+                            position: relative;
+                        }
+                        // &:before {                       
+                        //     content: counter(li-count);                       
+                        //     position: absolute;
+                        //     top: 0;
+                        //     font-size: 20px;
+                        //     font-weight: 700;
+                        //     line-height: 29.9px;
+                        //     color: var(--white);
+                        //     height: 35px;
+                        //     width: 35px;
+                        //     padding: 0 12px;
+                        //     border-radius: 100%;
+                        //     background: var(--bg4);
+                        //     box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px -2px 4px 0px rgba(104, 93, 255, 0.18) inset;
+
+                        //  }
+                        
+                    }
+                }
+            }
+            & .modal-promotoin-btn{
+                & .q6-button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
 }

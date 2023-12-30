@@ -147,12 +147,12 @@
   $('.q6-read-more').click(function () {
     $('.more-text').slideToggle();
     $('.providers-seo').toggleClass('show-overlay');
-    
+
   });
   $('.description-block-buttons').click(function () {
     $('.description-collapse').slideToggle();
     $('.widget-terms').toggleClass('show-overlay');
-    
+
   });
 
   $(".btn-top-group .q6-sc ").on("click", function (e) {
@@ -189,15 +189,19 @@
       return false;
     });
   };
-   //video
+  //video
   var video = function () {
     if ($('div').hasClass('box-video')) {
-        $('.popup-youtube').magnificPopup({
-            type: 'iframe'
-        });
+      $('.popup-youtube').magnificPopup({
+        type: 'iframe'
+      });
     }
-};
+  };
+  //faq
 
+  $(".title-wrap").on("click", function() {
+    $(this).closest('.faq-item').find('.faq-content').slideToggle("show");
+  });
 
   // Dom Ready
   $(function () {

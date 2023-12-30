@@ -366,6 +366,17 @@
                     }
                 }          
             }
+            & .v5{
+                    padding-top: 192px;
+                    padding-bottom: 259px;
+                    max-width: 50%;     
+                    & .title {
+                        margin-bottom: 16px;
+                    }  
+                    & .des-slide {
+                        margin-bottom: 60px;
+                    }  
+            }
 
         }
     }
