@@ -62,7 +62,6 @@
         }
     }
 }
-
 .tab-game {
     display: inline-flex;
     padding: 6px;
@@ -105,4 +104,15 @@
             display: none;
         }
     }
+}
+.tab-payment{
+    padding: 6px !important;
+    justify-content: flex-start !important;
+    & .item-title:not(:last-child)::after {
+       display: none;
+    }
+    & .item-title {
+        padding: 8px 28px !important;
+    }
+        
 }
