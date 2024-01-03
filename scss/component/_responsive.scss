@@ -1,4 +1,8 @@
-
+@media (max-width: 1600px) {
+    .widget-tabs .widget-menu-tab .item-title:not(:last-child)::after {
+        display: none;
+    }
+}
 @media (max-width: 1440px) {
     .box-image-dashboard {
         padding-left: 15px !important;
@@ -6,6 +10,9 @@
         img {
             display: none;
         }
+    }
+    .box-video {
+        margin-bottom: 20px;
     }
 }
 
@@ -80,6 +87,9 @@
     .panel{
         display: flex !important;
     }
+    .button-go.show {
+        bottom: 90px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -132,12 +142,29 @@
 }
 
 @media (max-width: 767px) {
+     .btn-groups .button-slider-style-over {
+        display: none;
+    }
     .q6-sc {
         padding: 4.5px 15px;
         font-size: 13px;
     }
     .deposit{
         display: none;
+    }
+    .payment-tab {
+        flex-wrap: wrap ;
+        & .payment-methods-bar{
+            max-width: 100%;
+        }
+    }
+    .q6-slide-item .q6-content {
+        padding-top: 150px !important;
+        padding-bottom: 150px !important;
+    }
+     .q6-slide-item .q6-content .title {
+        font-size: 60px;
+        line-height: 65px;
     }
 }
 
@@ -273,6 +300,14 @@
 @media (max-width: 414px) {
     .panel .panel-item .panel-link {
         font-size: 13px;
+    }
+    .q6-slide-item .q6-content .title {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .title-section .left .title {
+        font-size: 18px;
+        line-height: 25.88px;
     }
 
 }

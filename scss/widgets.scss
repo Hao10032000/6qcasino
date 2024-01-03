@@ -2556,20 +2556,388 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: 16px;
+    align-items: flex-start;
 
     & .card-info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 20px;
+
         & .line-gambling {
             height: 1px;
             width: 100%;
             background-color: #161C27;
         }
     }
-    & .q6-button{
+
+    & .q6-button {
         width: auto !important;
     }
 }
+
+//behavior limits
+.behavior-limits-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 20px;
+
+    & .behavior-card-item {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: var(--bg2);
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.70);
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+
+        & .limits-flex {
+            display: flex;
+
+            & .form-input {
+                position: relative;
+                width: calc(100% - 105px);
+
+                & input {
+                    height: 48px;
+                    padding: 10px 55px 10px 20px;
+                }
+
+                & .input-right {
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            & .form-buttons {
+                margin-left: 12px;
+
+                & .set-button {
+                    background: var(--box-benefit);
+                    box-shadow: unset;
+                    width: 110px;
+                    height: 48px;
+                    color: var(--text);
+
+                    &:hover {
+                        background: linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
+                        color: var(--white);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//Game history
+.game-history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+// payment-tab
+.payment-tab {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+
+    & .payment-methods-bar {
+        padding: 30px;
+        border-radius: 10px;
+        background: var(--bg2);
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.70);
+        max-width: 434px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        & .currency-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .image-select {
+                width: auto !important;
+                & > .dropdown-menu.show {
+                    width: auto;
+                }
+            }
+            & .currency-block-text{
+                color: var(--text);
+            }
+        }
+        & .line-payment-tab{
+            height: 1px;
+            width: 100%;
+            background-color:  rgba(147, 172, 211, 0.08);
+            margin: 24px 0;
+
+        }
+        & .payment-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            & .payment-card-item {
+                border-radius: 10px;
+                border: 1px solid rgba(147, 172, 211, 0.08);
+                background: #131623;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 68px;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+        & .subscriptions-switch {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+    }
+    & .payment-credit-card{
+        width: 100%;
+        padding: 14px 20px;
+        border-radius: 10px;
+        background: var(--bg2);
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.70);
+        & .payment-tab-form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            & .header-tab-payment {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    & .payment-method-credit {
+                        display: flex;
+                        align-items: center;
+                        gap: 40px;
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            height: 100%;
+                            width: 1px;
+                            background-color: #1E2231;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }                           
+                    }
+            }
+            & .line-tab-payment{
+                width: 100%;
+                height: 1px;
+                background-color: rgba(147, 172, 211, 0.08);
+            }
+            & fieldset{
+                & .payment-amount-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 15px;
+                    & .payment-title {
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 22.43px;
+                        color: var(--white);
+                        text-transform: uppercase;
+                    }
+                }
+                & .payment-amount-preset {
+                    padding: 6px;
+                    border-radius: 10px;
+                    background: var(--bg1);
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 15px;
+                    & .radio-buttons-button {
+                        padding: 9px;
+                        width: 100%;
+                        text-align: center;
+                        border-radius: 8px;
+                        color: var(--white);
+                        line-height: 22.43px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: var(--primary);
+                        }
+                    }
+                    & .radio-buttons-selected{
+                        background-color: var(--primary);
+                    }
+                }
+                & .payment-amount-input{
+                    position: relative;
+                    & .input-right {
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                & .switch-collapse {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    & .title{
+                        font-weight: 600;
+                        color: var(--white);
+                        line-height: 22.43px;
+                    }
+                    & .switch-collapse-toggle-label {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;                
+                    }
+                }
+                & .deposit-bonus-card-attribute {
+                    padding: 20px;
+                    background-color: var(--box-benefit);
+                    border-radius: 10px;
+                    max-width: 226px;
+                    width: 100%;
+                    & .radio-card-title {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 2px;
+                        & .card-title {
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            line-height: 22.43px;
+                        }
+                    }
+                    & .title {
+                        line-height: 22.43px;
+                        margin-bottom: 14px;
+                        display: inline-block;
+                        & span.amount {
+                            font-weight: 600;
+                            color: var(--text);
+                        }
+                    }
+                    & .deposit-bonus{
+                        & .min-deposit {
+                            color: #FF9548;
+                        }
+                    }
+                }
+            }
+            // & fieldset.checked-box{
+            //     display: none;
+            // }
+            & .payments-devcode-creditcard {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+        & .profile-tab-form{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            &  .header-form-profile {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+            & .date-picker-wrap {
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                & .date-picker {
+                    width: 33.3333%;
+                }
+            }  
+            & input.profile  {
+                padding: 19px 80px 19px 20px;
+            }
+            & .phone-very{
+                position: relative;
+                & .verify {
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    & p{
+                        font-weight: 600;
+                        color: var(--white);
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            left: -20px;
+                            height: 14px;
+                            width: 14px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            background: linear-gradient(0deg, #FF6B00 0.8%, #FFA869 100%);
+                            border-radius: 100px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+// switch checkbox
+.switch {
+    display: inline-block;
+    height: 26px;
+    position: relative;
+    max-width: 46px;
+    width: 100%;
+    margin-bottom: 0;
+  }                       
+  .switch input {
+    display:none;
+  }                          
+  .slider {
+    background-color: transparent;
+    border: 1px solid rgba(147, 172, 211, 0.1);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }                        
+  .slider:before {
+    background-color: var(--white);
+    bottom: 2px;
+    content: "";
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+  }                          
+  input:checked + .slider {
+    background-color: var(--primary);
+  }
+  input:checked + .checked-box {
+    display: block !important;
+  }                       
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }                         
+  .slider.round {
+    border-radius: 34px;
+  }                        
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  // label profile

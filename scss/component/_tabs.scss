@@ -9,6 +9,9 @@
         width: 100%;
         padding: 17px 17px;
         background-color: var(--bg1);
+        overflow-y: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
 
         .item-title {
             @include flex(center, center);
