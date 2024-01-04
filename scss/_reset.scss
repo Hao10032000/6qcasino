@@ -671,6 +671,10 @@ h6,
 
 /* Extra classes
 -------------------------------------------------------------- */
+.tag-red{
+    background: linear-gradient(0deg, #C4003B 0.8%, #FB1949 100%), linear-gradient(0deg, #0C5EFF 0.8%, #1398F9 100%), linear-gradient(314deg, #F50 27.39%, #FFA071 84.85%) !important;
+    box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 2.5px 0px 0px #61001D, 0px 3px 16px 0px rgba(255, 35, 65, 0.50) !important;
+}
 .text-link {
     color: var(--primary);
 }

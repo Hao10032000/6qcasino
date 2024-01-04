@@ -1324,11 +1324,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
     & .device {
         display: flex;
         align-items: center;
         gap: 16px;
+        flex-wrap: wrap;
 
         & span {
             font-size: 20px;
@@ -1449,6 +1452,9 @@
 
             &>img {
                 border-radius: 10px;
+                width: 100%;
+                min-height: 188px;
+                object-fit: cover;
             }
 
             & .prize-coin {
@@ -1636,6 +1642,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 
     & .paging {
         display: flex;
@@ -2116,6 +2124,28 @@
     }
 
 }
+.promotoins-v2{
+    &:not(:last-child){
+        margin-bottom: 19px;
+    }
+    & .tag {
+        top: 15px;
+        left: 15px;
+        & span {
+            padding: 6px 11px;
+        }
+    }
+    & .promotoins-car-inner{
+        padding: 78px 45px 14px 14px;
+        gap: 12px;
+        & .promotoins-card-content{
+            & .title{
+                font-size: 22px;
+                line-height: 22px;
+            }
+        }
+    }
+}
 
 
 .violet-promotoins:before .red-promotoins,
@@ -2132,6 +2162,17 @@
     top: 0;
     height: 100%;
     background: linear-gradient(90deg, #800519 0%, rgba(128, 5, 25, 0.00) 100%);
+    border-radius: 10px 0px 0px 10px;
+}
+.gray-promotoins:before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #364665 0%, rgba(54, 70, 101, 0.00) 100%);
     border-radius: 10px 0px 0px 10px;
 }
 
@@ -2156,6 +2197,28 @@
     top: 0;
     height: 100%;
     background: linear-gradient(90deg, #946D4E 0%, rgba(148, 109, 78, 0.00) 100%);
+    border-radius: 10px 0px 0px 10px;
+}
+.orange-promotoins:before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #F96E2F 0%, rgba(249, 110, 47, 0.00) 100%);
+    border-radius: 10px 0px 0px 10px;
+}
+.brown-promotoins:before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #3A1315 0%, rgba(58, 19, 21, 0.00) 100%);
     border-radius: 10px 0px 0px 10px;
 }
 
@@ -2374,12 +2437,14 @@
     }
 
     & .bonus-promo-wrapper {
+        display: flex;
+        gap: 20px;
 
         & .bonus-promo-card {
-            height: 100%;
             padding: 30px;
             border-radius: 10px;
             background-color: var(--bg1);
+            width: 100%;
 
             & .bonuses-wrap {
                 display: flex;
@@ -2661,27 +2726,32 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             & .image-select {
                 width: auto !important;
-                & > .dropdown-menu.show {
+
+                &>.dropdown-menu.show {
                     width: auto;
                 }
             }
-            & .currency-block-text{
+
+            & .currency-block-text {
                 color: var(--text);
             }
         }
-        & .line-payment-tab{
+
+        & .line-payment-tab {
             height: 1px;
             width: 100%;
-            background-color:  rgba(147, 172, 211, 0.08);
-            margin: 24px 0;
+            background-color: rgba(147, 172, 211, 0.08);
 
         }
+
         & .payment-card {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
+
             & .payment-card-item {
                 border-radius: 10px;
                 border: 1px solid rgba(147, 172, 211, 0.08);
@@ -2694,6 +2764,7 @@
                 cursor: pointer;
             }
         }
+
         & .subscriptions-switch {
             display: flex;
             align-items: flex-start;
@@ -2702,47 +2773,57 @@
         }
 
     }
-    & .payment-credit-card{
+
+    & .payment-credit-card {
         width: 100%;
         padding: 14px 20px;
         border-radius: 10px;
         background: var(--bg2);
         box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.70);
+
         & .payment-tab-form {
             display: flex;
             flex-direction: column;
             gap: 30px;
+
             & .header-tab-payment {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+    gap: 20px;
+
+                & .payment-method-credit {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
-                    & .payment-method-credit {
-                        display: flex;
-                        align-items: center;
-                        gap: 40px;
-                        position: relative;
-                        &:before {
-                            position: absolute;
-                            content: '';
-                            height: 100%;
-                            width: 1px;
-                            background-color: #1E2231;
-                            left: 50%;
-                            transform: translateX(-50%);
-                        }                           
+                    gap: 40px;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        height: 100%;
+                        width: 1px;
+                        background-color: #1E2231;
+                        left: 50%;
+                        transform: translateX(-50%);
                     }
+                }
             }
-            & .line-tab-payment{
+
+            & .line-tab-payment {
                 width: 100%;
                 height: 1px;
                 background-color: rgba(147, 172, 211, 0.08);
             }
-            & fieldset{
+
+            & fieldset {
                 & .payment-amount-title {
                     display: flex;
                     align-items: center;
                     gap: 10px;
                     margin-bottom: 15px;
+
                     & .payment-title {
                         font-size: 15px;
                         font-weight: 500;
@@ -2751,6 +2832,7 @@
                         text-transform: uppercase;
                     }
                 }
+
                 & .payment-amount-preset {
                     padding: 6px;
                     border-radius: 10px;
@@ -2759,6 +2841,7 @@
                     align-items: center;
                     gap: 8px;
                     margin-bottom: 15px;
+
                     & .radio-buttons-button {
                         padding: 9px;
                         width: 100%;
@@ -2767,16 +2850,20 @@
                         color: var(--white);
                         line-height: 22.43px;
                         cursor: pointer;
-                        &:hover{
+
+                        &:hover {
                             background-color: var(--primary);
                         }
                     }
-                    & .radio-buttons-selected{
+
+                    & .radio-buttons-selected {
                         background-color: var(--primary);
                     }
                 }
-                & .payment-amount-input{
+
+                & .payment-amount-input {
                     position: relative;
+
                     & .input-right {
                         position: absolute;
                         right: 20px;
@@ -2784,55 +2871,66 @@
                         transform: translateY(-50%);
                     }
                 }
+
                 & .switch-collapse {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-bottom: 10px;
-                    & .title{
+
+                    & .title {
                         font-weight: 600;
                         color: var(--white);
                         line-height: 22.43px;
                     }
+
                     & .switch-collapse-toggle-label {
                         display: flex;
                         align-items: center;
-                        gap: 10px;                
+                        gap: 10px;
+                        width: 142px;
                     }
                 }
+
                 & .deposit-bonus-card-attribute {
                     padding: 20px;
                     background-color: var(--box-benefit);
                     border-radius: 10px;
                     max-width: 226px;
                     width: 100%;
+
                     & .radio-card-title {
                         display: flex;
                         align-items: center;
                         gap: 8px;
                         margin-bottom: 2px;
+
                         & .card-title {
                             text-transform: uppercase;
                             font-weight: 600;
                             line-height: 22.43px;
                         }
                     }
+
                     & .title {
                         line-height: 22.43px;
                         margin-bottom: 14px;
                         display: inline-block;
+
                         & span.amount {
                             font-weight: 600;
                             color: var(--text);
                         }
                     }
-                    & .deposit-bonus{
+
+                    & .deposit-bonus {
                         & .min-deposit {
                             color: #FF9548;
                         }
                     }
                 }
             }
+
             // & fieldset.checked-box{
             //     display: none;
             // }
@@ -2842,38 +2940,47 @@
                 align-items: center;
             }
         }
-        & .profile-tab-form{
+
+        & .profile-tab-form {
             display: flex;
             flex-direction: column;
             gap: 30px;
-            &  .header-form-profile {
+
+            & .header-form-profile {
                 display: flex;
                 justify-content: space-between;
                 gap: 20px;
             }
+
             & .date-picker-wrap {
                 display: flex;
                 gap: 10px;
                 width: 100%;
+
                 & .date-picker {
                     width: 33.3333%;
                 }
-            }  
-            & input.profile  {
+            }
+
+            & input.profile {
                 padding: 19px 80px 19px 20px;
             }
-            & .phone-very{
+
+            & .phone-very {
                 position: relative;
+
                 & .verify {
                     position: absolute;
                     right: 20px;
                     top: 50%;
                     transform: translateY(-50%);
-                    & p{
+
+                    & p {
                         font-weight: 600;
                         color: var(--white);
                         position: relative;
-                        &::before{
+
+                        &::before {
                             content: '';
                             position: absolute;
                             left: -20px;
@@ -2892,6 +2999,7 @@
 
     }
 }
+
 // switch checkbox
 .switch {
     display: inline-block;
@@ -2900,11 +3008,13 @@
     max-width: 46px;
     width: 100%;
     margin-bottom: 0;
-  }                       
-  .switch input {
-    display:none;
-  }                          
-  .slider {
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
     background-color: transparent;
     border: 1px solid rgba(147, 172, 211, 0.1);
     bottom: 0;
@@ -2914,8 +3024,9 @@
     right: 0;
     top: 0;
     transition: .4s;
-  }                        
-  .slider:before {
+}
+
+.slider:before {
     background-color: var(--white);
     bottom: 2px;
     content: "";
@@ -2924,20 +3035,26 @@
     position: absolute;
     transition: .4s;
     width: 20px;
-  }                          
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: var(--primary);
-  }
-  input:checked + .checked-box {
+}
+
+input:checked+.checked-box {
     display: block !important;
-  }                       
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     transform: translateX(26px);
-  }                         
-  .slider.round {
+}
+
+.slider.round {
     border-radius: 34px;
-  }                        
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
-  // label profile
+}
+
+// label profile

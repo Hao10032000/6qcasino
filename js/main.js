@@ -202,6 +202,9 @@
   $(".title-wrap").on("click", function() {
     $(this).closest('.faq-item').find('.faq-content').slideToggle("show");
   });
+  $(".title-wrap").on("click", function() {
+    $(this).closest('.faq-item').find('.faq-content').slideToggle("show");
+  });
 
   // Dom Ready
   $(function () {

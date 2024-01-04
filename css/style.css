@@ -685,6 +685,11 @@ h6,
 
 /* Extra classes
 -------------------------------------------------------------- */
+.tag-red {
+  background: linear-gradient(0deg, #C4003B 0.8%, #FB1949 100%), linear-gradient(0deg, #0C5EFF 0.8%, #1398F9 100%), linear-gradient(314deg, #F50 27.39%, #FFA071 84.85%) !important;
+  box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.3) inset, 0px 2.5px 0px 0px #61001D, 0px 3px 16px 0px rgba(255, 35, 65, 0.5) !important;
+}
+
 .text-link {
   color: var(--primary);
 }
@@ -2168,11 +2173,14 @@ a:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .mobie-app .device {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
 }
 .mobie-app .device span {
   font-size: 20px;
@@ -2271,6 +2279,9 @@ a:focus {
 }
 .lottery-prizes .lottery-prizes-item .lottery-prize-top > img {
   border-radius: 10px;
+  width: 100%;
+  min-height: 188px;
+  object-fit: cover;
 }
 .lottery-prizes .lottery-prizes-item .lottery-prize-top .prize-coin {
   padding: 32px 10px;
@@ -2415,6 +2426,8 @@ a:focus {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .winner-paging .paging {
   display: flex;
@@ -2790,6 +2803,25 @@ a:focus {
   cursor: pointer;
 }
 
+.promotoins-v2:not(:last-child) {
+  margin-bottom: 19px;
+}
+.promotoins-v2 .tag {
+  top: 15px;
+  left: 15px;
+}
+.promotoins-v2 .tag span {
+  padding: 6px 11px;
+}
+.promotoins-v2 .promotoins-car-inner {
+  padding: 78px 45px 14px 14px;
+  gap: 12px;
+}
+.promotoins-v2 .promotoins-car-inner .promotoins-card-content .title {
+  font-size: 22px;
+  line-height: 22px;
+}
+
 .violet-promotoins:before .red-promotoins,
 .yellow-promotoins {
   position: relative;
@@ -2804,6 +2836,18 @@ a:focus {
   top: 0;
   height: 100%;
   background: linear-gradient(90deg, #800519 0%, rgba(128, 5, 25, 0) 100%);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.gray-promotoins:before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  left: 0;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #364665 0%, rgba(54, 70, 101, 0) 100%);
   border-radius: 10px 0px 0px 10px;
 }
 
@@ -2828,6 +2872,30 @@ a:focus {
   top: 0;
   height: 100%;
   background: linear-gradient(90deg, #946D4E 0%, rgba(148, 109, 78, 0) 100%);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.orange-promotoins:before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  left: 0;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #F96E2F 0%, rgba(249, 110, 47, 0) 100%);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.brown-promotoins:before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  left: 0;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #3A1315 0%, rgba(58, 19, 21, 0) 100%);
   border-radius: 10px 0px 0px 10px;
 }
 
@@ -3004,11 +3072,15 @@ a:focus {
   width: 100%;
   background-color: rgba(147, 172, 211, 0.08);
 }
+.promo-bonuses .bonus-promo-wrapper {
+  display: flex;
+  gap: 20px;
+}
 .promo-bonuses .bonus-promo-wrapper .bonus-promo-card {
-  height: 100%;
   padding: 30px;
   border-radius: 10px;
   background-color: var(--bg1);
+  width: 100%;
 }
 .promo-bonuses .bonus-promo-wrapper .bonus-promo-card .bonuses-wrap {
   display: flex;
@@ -3258,7 +3330,6 @@ a:focus {
   height: 1px;
   width: 100%;
   background-color: rgba(147, 172, 211, 0.08);
-  margin: 24px 0;
 }
 .payment-tab .payment-methods-bar .payment-card {
   display: grid;
@@ -3298,6 +3369,8 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .payment-tab .payment-credit-card .payment-tab-form .header-tab-payment .payment-method-credit {
   display: flex;
@@ -3380,6 +3453,7 @@ a:focus {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 142px;
 }
 .payment-tab .payment-credit-card .payment-tab-form fieldset .deposit-bonus-card-attribute {
   padding: 20px;
@@ -4359,6 +4433,8 @@ form input[type=date]::-webkit-calendar-picker-indicator {
 .q6-widget-slide .q6-slide .q6-slide-item .q6-image img {
   position: absolute;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .q6-widget-slide .q6-slide .q6-slide-item .q6-content {
   padding-top: 216px;
@@ -4554,6 +4630,36 @@ form input[type=date]::-webkit-calendar-picker-indicator {
 }
 .box-video .video-content .video-content-bottom span:hover {
   color: var(--white);
+}
+
+.video-style-2 {
+  background-color: #181D2E;
+}
+.video-style-2:not(:last-child) {
+  margin-bottom: 19px;
+}
+.video-style-2 .video-image {
+  width: 33.8%;
+}
+.video-style-2 .video-image .title {
+  bottom: 7px;
+  font-size: 5px;
+}
+.video-style-2 .video-content {
+  gap: 20px;
+}
+.video-style-2 .video-content .video-content-top .name {
+  color: var(--white);
+  margin-top: 2px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.video-style-2 .video-content .video-content-bottom {
+  gap: 11px;
+}
+.video-style-2 .video-content .video-content-bottom i {
+  font-size: 9px !important;
+  padding: 6px;
 }
 
 .box-offer-item {
@@ -6142,139 +6248,102 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   background: transparent;
 }
 
-.right-sidebar {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.page-game-panel {
+  width: 70px;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  padding: 16px 20px;
-  border-radius: 14px;
-  background: var(--backdrop);
-  box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.1) inset, 0px 8px 22px 0px rgba(4, 8, 16, 0.3);
-  height: fit-content;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  background: #0B0F18;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.7);
 }
-.right-sidebar .heading {
-  color: var(--Body-Text);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 17px;
-  text-transform: capitalize;
-  padding-left: 17px;
-  position: relative;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 20px;
+.page-game-panel .game-panel-logo {
+  padding: 7px 10px;
+  border-bottom: 1px solid rgba(147, 172, 211, 0.08);
 }
-.right-sidebar .heading span {
-  font-weight: 900;
-  color: var(--White);
-}
-.right-sidebar .heading::before {
-  position: absolute;
-  content: "";
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: linear-gradient(274deg, #28A745 4.1%, #5ED078 100%);
-  top: 3px;
-  left: 0;
-}
-.right-sidebar ul {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.page-game-panel .game-panel-inner {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-.right-sidebar ul li {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  width: 270px;
-  padding: 12px;
-  gap: 10px;
-  border-radius: 14px;
-  background: var(--secondary);
-}
-.right-sidebar ul li .image img {
-  width: 44px;
-  min-width: 44px;
-  height: 44px;
-  border-radius: 14px;
-}
-.right-sidebar ul li .content {
-  flex-grow: 1;
-}
-.right-sidebar ul li .content .name {
-  color: var(--Text-Title);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 19px;
-  text-transform: capitalize;
-}
-.right-sidebar ul li .content .time {
-  color: var(--Note);
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 15px;
-  text-transform: capitalize;
-}
-.right-sidebar ul li .content .text {
-  color: var(--Body-Text);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 18px;
-  margin-top: 5px;
-}
-.right-sidebar ul li.main {
-  position: relative;
-  min-height: 125px;
+  justify-content: space-between;
+  height: 100%;
+  padding: 30px 10px;
   gap: 20px;
-  overflow: hidden;
 }
-.right-sidebar ul li.main .image img {
-  width: 52px;
-  min-width: 52px;
-  height: 79px;
-  border-radius: 0;
+.page-game-panel .game-panel-inner .game-panel-top .game-panel-menu.nav-link {
+  padding: 0px 13px !important;
+  background-color: transparent;
 }
-.right-sidebar ul li.main .content .name {
-  font-size: 18px;
-  line-height: 24px;
+.page-game-panel .game-panel-inner .game-panel-top .game-panel-menu .nav-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.right-sidebar ul li.main .featured-countdown {
-  margin-top: 12px;
+.page-game-panel .game-panel-inner .game-panel-top .game-panel-menu .tab-content {
+  border-right: 1px solid #161C27;
+  background: #0B0F18;
+  padding: 14px 30px;
+  width: 340px;
+  position: fixed;
+  right: 70px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
 }
-.right-sidebar ul li.main::after {
-  position: absolute;
-  content: "";
-  top: -155px;
-  right: -137px;
-  width: 202px;
-  height: 151px;
-  background: #8F21F7;
-  filter: blur(50px);
+.page-game-panel .game-panel-inner .game-panel-top .game-panel-menu .active {
+  background-color: transparent;
 }
-.right-sidebar ul li.main::before {
-  position: absolute;
-  content: "";
-  bottom: -157px;
-  left: -112px;
-  width: 254px;
-  height: 190px;
-  background: #8F21F7;
-  filter: blur(50px);
+.page-game-panel .game-panel-inner .game-panel-top .game-panel-menu .active i {
+  color: var(--white);
 }
-.right-sidebar form {
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-  margin-top: 20px;
+.page-game-panel .game-panel-inner .game-panel-top .game-panel-menu i {
+  font-size: 25px;
+  color: #55657E;
+}
+.page-game-panel .game-panel-inner .game-panel-bottom .menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.page-game-panel .game-panel-inner .game-panel-bottom .menu-list .menu-item a {
+  padding: 13px;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #171F2F;
+}
+.page-game-panel .game-panel-inner .game-panel-bottom .menu-list .menu-item a:hover {
+  background-color: var(--primary);
+}
+.page-game-panel .game-panel-inner .game-panel-bottom .menu-list .menu-item a i {
+  font-size: 22px;
+  color: #55657E;
+}
+.page-game-panel .game-panel-inner .game-panel-bottom .menu-list .menu-item a svg path {
+  fill: #55657E;
+}
+.page-game-panel .game-panel-inner .game-panel-bottom .menu-list .menu-item a:hover i {
+  color: var(--white);
+}
+.page-game-panel .game-panel-inner .game-panel-bottom .menu-list .menu-item a:hover svg path {
+  fill: var(--white);
+}
+
+.game-panel-content .game-panel-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 19px;
+}
+.game-panel-content .game-panel-content-header .btn-close-panel {
+  padding: 10px 12px;
+  border: 1px solid;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
 .widget-tabs .widget-menu-tab {
@@ -6852,6 +6921,9 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media (max-width: 1440px) {
+  .q6-container .vip-passes .row > * {
+    margin-bottom: 20px;
+  }
   .box-image-dashboard {
     padding-left: 15px !important;
     padding-right: 15px !important;
@@ -6861,6 +6933,9 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
   .box-video {
     margin-bottom: 20px;
+  }
+  .lottery-prizes .lottery-prizes-item {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 1200px) {
@@ -6926,8 +7001,64 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   .box-image-dashboard {
     margin-bottom: 30px;
   }
+  .install-app .app .install-steps {
+    gap: 40px;
+  }
+  .install-app .app {
+    padding: 0px;
+  }
+  .mobie-app {
+    justify-content: center;
+  }
+  .lottery-ticket .ticket-content-wrap > img {
+    max-width: 50%;
+  }
 }
 @media (max-width: 991px) {
+  .mt--109 {
+    margin-top: -50px;
+  }
+  .vip-benefits .vip-benefits-content {
+    flex: 0;
+    max-width: 100%;
+  }
+  .vip-benefits .vip-benefits-list {
+    width: 100%;
+    display: flex;
+    gap: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .vip-benefits .vip-benefits-list .benefits-list-item {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  .vip-benefits .vip-benefits-list .benefits-list-item:not(:first-child):before {
+    display: none;
+  }
+  .vip-benefits .vip-benefits-content::after {
+    display: none;
+  }
+  .vip-benefits {
+    gap: 40px;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner {
+    gap: 0px;
+    padding: 10px;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-right .lottery-ticket-right {
+    gap: 0px;
+    padding: 10px;
+  }
+  .install-app .app .install-steps .install-steps-item .step-content .step-text br {
+    display: none;
+  }
+  .mobie-app {
+    padding: 20px !important;
+  }
   .box-offer-item.mb-20-tablet {
     margin-bottom: 20px;
   }
@@ -6960,6 +7091,49 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media (max-width: 767px) {
+  .q6-widget-instant .row > * {
+    margin-bottom: 20px;
+  }
+  .q6-widget-balance .row > * {
+    margin-bottom: 20px;
+  }
+  .promotoins-wrap {
+    grid-template-columns: 1fr;
+  }
+  .q6-widget-slide .q6-slide .q6-slide-item .v5 {
+    max-width: 80%;
+  }
+  .widget-lottery-flow .v2 {
+    margin-bottom: 30px;
+  }
+  .widget-leaderboard .lottery-winner .lottery-winner-list .lottery-winner-item {
+    gap: 40px;
+  }
+  .widget-leaderboard .lottery-winner .lottery-winners-header {
+    gap: 40px;
+  }
+  .widget-leaderboard .lottery-winner .winner-right {
+    width: 30%;
+  }
+  .lottery-ticket .ticket-content-wrap {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .lottery-ticket .ticket-content-wrap > img {
+    max-width: 100%;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content .ticket {
+    justify-content: center;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content {
+    padding-top: 0px;
+    margin-bottom: 30px;
+  }
+  .q6-widget-slide .q6-slide .q6-slide-item .v3 .btn-slide .q6-sc {
+    font-size: 18px;
+    padding: 8.5px 40px;
+    width: auto;
+  }
   .btn-groups .button-slider-style-over {
     display: none;
   }
@@ -6983,6 +7157,31 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   .q6-slide-item .q6-content .title {
     font-size: 60px;
     line-height: 65px;
+  }
+  .behavior-limits-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .widget-gambling .q6-container .row > * {
+    margin-bottom: 30px;
+  }
+  .title-tab {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .game-history {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .mobie-app .device {
+    justify-content: center;
+  }
+  .mobie-app .device span {
+    text-align: center;
+  }
+  .mobie-app .drive-group li i {
+    font-size: 20px;
+  }
+  .promo-bonuses .bonus-promo-wrapper {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 600px) {
@@ -7072,8 +7271,60 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   .section-content-right .main-content .main-content-inner .main-content-bottom ul {
     flex-wrap: wrap;
   }
+  .install-app .app .install-steps {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  .game-history {
+    grid-template-columns: 1fr 1fr;
+  }
+  .widget-leaderboard .lottery-winner .winner-left {
+    width: 5%;
+  }
+  .widget-leaderboard .lottery-winner .winner-center {
+    width: 46%;
+  }
+  .widget-leaderboard .lottery-winner .winner-right {
+    width: 50%;
+  }
+  .winner-paging {
+    justify-content: center;
+  }
 }
 @media (max-width: 414px) {
+  .vip-benefits .vip-benefits-list .benefits-list-item {
+    width: 100%;
+  }
+  .promotoins-item .promotoins-car-inner {
+    padding: 100px 30px 38px 30px;
+    gap: 20px;
+  }
+  .promotoins-item .promotoins-car-inner .promotoins-card-info .q6-sc {
+    padding: 9.5px 25px;
+    width: auto;
+  }
+  .promotoins-card-content .title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .promotoins-item .promotoins-car-inner .promotoins-card-content .promotoins-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .promotoins-item .tag {
+    left: 30px;
+  }
+  .promo-block-points {
+    flex-direction: column;
+    align-content: center;
+    gap: 20px;
+  }
+  .promo-block-points .player-level-link {
+    padding-left: 0px;
+    border-left: unset;
+    margin-left: 0px;
+  }
   .panel .panel-item .panel-link {
     font-size: 13px;
   }
@@ -7084,6 +7335,26 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   .title-section .left .title {
     font-size: 18px;
     line-height: 25.88px;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner .text-amount {
+    line-height: 35px;
+    font-size: 30px;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-right .lottery-ticket-right .text-amount {
+    line-height: 35px;
+    font-size: 30px;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner .text-deposit {
+    font-size: 12px;
+  }
+  .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner .lottery-ticket-text {
+    font-size: 12px;
+  }
+  .lottery-ticket .ticket-header {
+    padding: 20px 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 .nav-list-item .title-footer {

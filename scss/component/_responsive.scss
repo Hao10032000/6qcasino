@@ -3,16 +3,25 @@
         display: none;
     }
 }
+
 @media (max-width: 1440px) {
+    .q6-container .vip-passes .row > * {
+        margin-bottom: 20px;
+    }
     .box-image-dashboard {
         padding-left: 15px !important;
         padding-right: 15px !important;
+
         img {
             display: none;
         }
     }
+
     .box-video {
         margin-bottom: 20px;
+    }
+    .lottery-prizes .lottery-prizes-item {
+        margin-bottom: 30px;
     }
 }
 
@@ -21,21 +30,25 @@
         .section-menu-left-mobile {
             display: none;
         }
+
         .section-content-right {
             .main-content {
                 flex-wrap: wrap;
                 justify-content: center;
                 padding-right: 0;
                 padding-left: 0 !important;
+
                 .main-content-inner {
                     width: -webkit-fill-available;
                 }
+
                 .right-sidebar {
                     margin-left: 15px;
                     margin-right: 15px;
                     margin-top: 30px;
                     width: 100%;
                     max-width: 1060px;
+
                     ul {
                         li {
                             width: unset;
@@ -44,11 +57,14 @@
                 }
             }
         }
+
         .section-menu-left {
             left: -100%;
+
             .box-logo {
                 left: -100%;
             }
+
             &.active {
                 left: 0;
                 opacity: 1;
@@ -64,29 +80,37 @@
                 //     z-index: 40;
                 // }
             }
+
             .button-show-hide {
                 display: block;
             }
         }
     }
+
     .header-dashboard {
         width: 100%;
     }
-    .header-action{
+
+    .header-action {
         display: block !important;
     }
-    .search-top{
+
+    .search-top {
         display: none !important;
     }
+
     .header-dashboard.active {
         width: 100% !important;
     }
-    .section-menu-left > .box-logo .button-collapse-menu {
+
+    .section-menu-left>.box-logo .button-collapse-menu {
         display: none;
     }
-    .panel{
+
+    .panel {
         display: flex !important;
     }
+
     .button-go.show {
         bottom: 90px;
     }
@@ -96,45 +120,112 @@
     .box-image-dashboard {
         margin-bottom: 30px;
     }
+    .install-app .app .install-steps {
+        gap: 40px;
+    }
+
+    .install-app .app {
+        padding: 0px;
+    }
+
+    .mobie-app {
+        justify-content: center;
+    }
+    .lottery-ticket .ticket-content-wrap > img {
+        max-width: 50%;
+    }
 }
 
 @media (max-width: 991px) {
+    .mt--109 {
+        margin-top: -50px;
+    }
+    .vip-benefits .vip-benefits-content {
+        flex: 0;
+        max-width: 100%;
+    }
+    .vip-benefits .vip-benefits-list {
+        width: 100%;
+        display: flex;
+         gap: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .vip-benefits .vip-benefits-list .benefits-list-item {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+    .vip-benefits .vip-benefits-list .benefits-list-item:not(:first-child):before {
+        display: none;
+    }
+    .vip-benefits .vip-benefits-content::after {
+       display: none;
+    }
+    .vip-benefits {
+        gap: 40px;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner {
+        gap: 0px;
+        padding: 10px;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-right .lottery-ticket-right {
+        gap: 0px;
+        padding: 10px;
+    }
+    .install-app .app .install-steps .install-steps-item .step-content .step-text br {
+        display: none;
+    }
+    .mobie-app {
+        padding: 20px !important;
+    }
+
     .box-offer-item {
         &.mb-20-tablet {
             margin-bottom: 20px;
         }
     }
+
     .section-menu-left {
         left: -100%;
+
         .box-logo {
             left: -100%;
         }
     }
+
     .wg-the-arena {
         .left {
             padding-left: 0;
         }
     }
+
     .wg-best-game {
         .grid-box {
             max-width: unset;
             margin-top: 30px;
         }
     }
+
     .page-title {
         .bottom {
             flex-wrap: wrap;
             justify-content: space-between;
+
             .box-icon {
                 width: 23%;
             }
         }
     }
+
     .page-title {
         .content {
             padding-left: 0;
         }
     }
+
     .nav-list-item {
         width: 33.333%;
         margin-bottom: 30px;
@@ -142,30 +233,113 @@
 }
 
 @media (max-width: 767px) {
-     .btn-groups .button-slider-style-over {
+    .q6-widget-instant .row > * {
+      margin-bottom: 20px;
+    }
+    .q6-widget-balance .row > * {
+        margin-bottom: 20px;
+    }
+    .promotoins-wrap {
+        grid-template-columns: 1fr;
+    }
+    .q6-widget-slide .q6-slide .q6-slide-item .v5 {
+        max-width: 80%;
+    }
+    .widget-lottery-flow .v2 {
+        margin-bottom: 30px;
+    }
+    .widget-leaderboard .lottery-winner .lottery-winner-list .lottery-winner-item {
+        gap: 40px;
+    }
+    .widget-leaderboard .lottery-winner .lottery-winners-header {
+        gap: 40px;
+    }
+    .widget-leaderboard .lottery-winner .winner-right {
+        width: 30%;
+    }
+    .lottery-ticket .ticket-content-wrap {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .lottery-ticket .ticket-content-wrap > img {
+        max-width: 100%;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content .ticket {
+        justify-content: center;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content {
+        padding-top: 0px;
+        margin-bottom: 30px;
+    }
+    .q6-widget-slide .q6-slide .q6-slide-item .v3 .btn-slide .q6-sc {
+        font-size: 18px;
+        padding: 8.5px 40px;
+        width: auto;
+    }
+
+    .btn-groups .button-slider-style-over {
         display: none;
     }
+
     .q6-sc {
         padding: 4.5px 15px;
         font-size: 13px;
     }
-    .deposit{
+
+    .deposit {
         display: none;
     }
+
     .payment-tab {
-        flex-wrap: wrap ;
-        & .payment-methods-bar{
+        flex-wrap: wrap;
+
+        & .payment-methods-bar {
             max-width: 100%;
         }
     }
+
     .q6-slide-item .q6-content {
         padding-top: 150px !important;
         padding-bottom: 150px !important;
     }
-     .q6-slide-item .q6-content .title {
+
+    .q6-slide-item .q6-content .title {
         font-size: 60px;
         line-height: 65px;
     }
+
+    .behavior-limits-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .widget-gambling .q6-container .row>* {
+        margin-bottom: 30px;
+    }
+
+    .title-tab {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .game-history {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .mobie-app .device {
+        justify-content: center;
+    }
+
+    .mobie-app .device span {
+        text-align: center;
+    }
+
+    .mobie-app .drive-group li i {
+        font-size: 20px;
+    }
+    .promo-bonuses .bonus-promo-wrapper {
+        flex-wrap: wrap;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -176,9 +350,11 @@
                     .header-news {
                         display: none;
                     }
+
                     .header-sign-up {
                         display: none;
                     }
+
                     a {
                         width: auto;
                     }
@@ -186,37 +362,46 @@
             }
         }
     }
-.header-currency .image-select {
+
+    .header-currency .image-select {
         width: 90px !important;
     }
+
     .nav-list-item {
         width: 100% !important;
     }
+
     .wg-partners {
+
         .content-1,
         .content-2,
         .content {
             gap: 15px;
             margin-bottom: 15px;
+
             img {
                 width: 100px;
             }
         }
-    } 
-    .wg-the-vault  {
+    }
+
+    .wg-the-vault {
         .content {
             .grid-icon {
                 flex-wrap: wrap;
+
                 img {
                     margin-bottom: 15px;
                 }
             }
-        } 
+        }
     }
+
     .page-title {
-        > .icon {
+        >.icon {
             display: none;
         }
+
         .content {
             h2 {
                 font-size: 30px;
@@ -224,54 +409,67 @@
             }
         }
     }
+
     .wg-the-arena {
         flex-wrap: wrap;
+
         .left {
             width: 100%;
+
             .grid-item {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
         .right {
             width: 100%;
+
             .item-1 {
                 position: unset;
             }
         }
     }
+
     .page-title {
         .bottom {
             .box-icon {
                 width: 48%;
             }
         }
-    } 
+    }
+
     .wg-best-game {
         .grid-box {
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
     .box-game-item {
         .mb-30-mobile {
             margin-bottom: 30px;
         }
-    } 
+    }
+
     .wg-table-ratings {
         overflow-x: auto;
-        > div {
+
+        >div {
             width: 768px;
         }
     }
+
     .section-content-right {
         .header-dashboard {
             .header-coins {
                 display: none;
                 // margin-right: 12px;
             }
+
             .header-button {
                 .dropdown-toggle {
                     a {
                         width: auto;
+
                         span.text-wallet {
                             display: none;
                         }
@@ -279,12 +477,14 @@
                 }
             }
         }
+
         .main-content {
             .main-content-inner {
                 .main-content-bottom {
                     gap: 20px;
                     flex-wrap: wrap;
                     justify-content: center;
+
                     ul {
                         flex-wrap: wrap;
                     }
@@ -292,22 +492,95 @@
             }
         }
     }
+    .install-app .app .install-steps {
+        flex-wrap: wrap;
+    }
 }
+
 @media (max-width: 480px) {
-   
+    .game-history {
+        grid-template-columns: 1fr 1fr;
+    }
+    .widget-leaderboard .lottery-winner .winner-left {
+        width: 5%;
+    }
+    .widget-leaderboard .lottery-winner .winner-center {
+        width: 46%;
+    }
+    .widget-leaderboard .lottery-winner .winner-right {
+        width: 50%;
+    }
+    .winner-paging {
+        justify-content: center;
+    }
 
 }
+
 @media (max-width: 414px) {
+    .vip-benefits .vip-benefits-list .benefits-list-item {
+        width: 100%;
+    }
+    .promotoins-item .promotoins-car-inner {
+        padding: 100px 30px 38px 30px;
+        gap: 20px;
+    }
+    .promotoins-item .promotoins-car-inner .promotoins-card-info .q6-sc {
+        padding: 9.5px 25px;
+        width: auto;
+    }
+    .promotoins-card-content .title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .promotoins-item .promotoins-car-inner .promotoins-card-content .promotoins-subtitle {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .promotoins-item .tag {
+        left: 30px;
+    }
+    .promo-block-points {
+        flex-direction: column;
+        align-content: center;
+        gap: 20px;
+    }
+    .promo-block-points .player-level-link {
+        padding-left: 0px;
+        border-left: unset;
+        margin-left: 0px;
+    }
     .panel .panel-item .panel-link {
         font-size: 13px;
     }
+
     .q6-slide-item .q6-content .title {
         font-size: 45px;
         line-height: 50px;
     }
+
     .title-section .left .title {
         font-size: 18px;
         line-height: 25.88px;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner .text-amount {
+        line-height: 35px;
+        font-size: 30px;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-right .lottery-ticket-right .text-amount {
+        line-height: 35px;
+        font-size: 30px;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner .text-deposit {
+        font-size: 12px;
+    }
+    .lottery-ticket .ticket-content-wrap .ticket-content .ticket .ticket-left .lottery-ticket-inner .lottery-ticket-text {
+        font-size: 12px;
+    }
+    .lottery-ticket .ticket-header {
+        padding: 20px 15px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
 }
