@@ -202,9 +202,12 @@
   $(".title-wrap").on("click", function() {
     $(this).closest('.faq-item').find('.faq-content').slideToggle("show");
   });
-  $(".title-wrap").on("click", function() {
-    $(this).closest('.faq-item').find('.faq-content').slideToggle("show");
+  $(".game-panel-menu .nav-pills .btn-side-bar-game").on("click", function() {
+    $(this).closest('.game-panel-menu').find('.tab-content').addClass("show-tab-penal");
   });
+  $(".btn-close-panel").on("click", function (e) {
+    $('.tab-content').removeClass('show-tab-penal');
+  })
 
   // Dom Ready
   $(function () {

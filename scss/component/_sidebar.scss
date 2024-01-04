@@ -44,10 +44,13 @@
                     padding: 14px 30px;
                     width: 340px;
                     position: fixed;
-                    right: 70px;
+                    right: -340px;
                     height: 100%;
                     top: 0;
                     bottom: 0;
+                }
+                & .show-tab-penal{
+                    right: 70px !important;
                 }
 
 

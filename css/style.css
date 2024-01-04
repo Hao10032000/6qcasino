@@ -6288,10 +6288,13 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   padding: 14px 30px;
   width: 340px;
   position: fixed;
-  right: 70px;
+  right: -340px;
   height: 100%;
   top: 0;
   bottom: 0;
+}
+.page-game-panel .game-panel-inner .game-panel-top .game-panel-menu .show-tab-penal {
+  right: 70px !important;
 }
 .page-game-panel .game-panel-inner .game-panel-top .game-panel-menu .active {
   background-color: transparent;
