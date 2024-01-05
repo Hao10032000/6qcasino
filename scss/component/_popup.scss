@@ -1,39 +1,25 @@
 .model-sign-in {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 20;
-    background: rgba(8, 9, 13, 0.75);
-    backdrop-filter: blur(2px);
-    align-items: flex-start;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    max-height: 100dvh;
-    overflow: auto;
-    width: 100%;
-    display: none;
-    opacity: 0;
-
     &.show {
         display: flex !important;
         opacity: 1;
     }
 
-    & .modal-wrap {
-        position: relative;
+    & .modal-dialog {
         max-width: 1000px;
         width: 100%;
+    }
+
+    & .modal-wrap {
+        position: relative;
         display: flex;
+        flex-direction: row;
         margin: auto;
         align-items: center;
         justify-content: space-between;
         border-radius: 20px;
         padding: 30px;
         gap: 50px;
-        background: #181D2E;
+        background: var(--bg1);
         box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.80);
 
         & .model-image {
@@ -123,6 +109,7 @@
         }
 
         & .model-content {
+            width: 100%;
 
             & a {
                 color: var(--primary);
@@ -166,6 +153,7 @@
 
                 & .form-form-step {
                     margin-bottom: 36px;
+
 
                     & .input {
                         &:not(:last-child) {
@@ -270,7 +258,69 @@
                 }
             }
         }
+    }
 
+    & .model-otp {
+        align-items: flex-start !important;
+
+        & .otp {
+            & .input-otp {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                & input.input-native {
+                    font-size: 32px !important;
+                    font-weight: 700;
+                    line-height: 47.84px !important;
+                    padding: 10px !important;
+                    height: 65px !important;
+                    text-align: center;
+
+                    &::placeholder {
+                        font-size: 50px !important;
+                        font-weight: 700;
+                        line-height: 65px !important;
+                        text-align: center;
+                        vertical-align: middle;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            & .form-info {
+                margin-bottom: 53px;
+                & .btn-close-model {
+                    right: 40px;
+                    top: 40px;
+                }
+            }
+
+            & .form-sign-in {
+                & .title-otp {
+                    margin-bottom: 5px;
+                }
+
+                & .des-otp {
+                    margin-bottom: 30px;
+                }
+
+                & .form-subtitle {
+                    margin-bottom: 10px;
+                }
+                & .form-buttons-very {
+                    margin-bottom: 10px;
+                }
+                & .resend {
+                    background: transparent;
+                    box-shadow: unset;
+                    &:hover{
+                        color: var(--primary);
+                        background: transparent;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -282,6 +332,7 @@
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s;
+    z-index: 1;
 
     &:hover {
         rotate: 90deg;
@@ -371,6 +422,10 @@
                         align-items: center;
                         justify-content: center;
                         gap: 7px;
+                        flex-wrap: nowrap;
+                        & p{
+                            color: var(--white);
+                        }
                     }
 
                 }
@@ -404,6 +459,7 @@
         }
     }
 }
+
 // Model Backdrop
 .modal-backdrop {
     background: rgba(8, 9, 13, 0.75);
@@ -413,15 +469,17 @@
         opacity: 1;
     }
 }
+
 // Model promotoins
-.model-promotoins{
+.model-promotoins {
     & .modal-dialog-centered {
         max-width: 710px;
         width: 100%;
-       
-        & .modal-content{
+
+        & .modal-content {
             border-radius: 25px;
         }
+
         & .modal-content-promotoins {
             padding: 30px;
             display: flex;
@@ -431,8 +489,9 @@
             border-radius: 20px;
             box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.80);
             position: relative;
+
             & .btn-close {
-                background: url(/images/page/closex.png) center/1em auto no-repeat;   
+                background: url(/images/page/closex.png) center/1em auto no-repeat;
                 opacity: 1;
                 position: absolute;
                 padding: 8px;
@@ -442,11 +501,13 @@
                 top: 40px;
                 z-index: 1;
             }
-            & .image-modal-promotoins{
+
+            & .image-modal-promotoins {
                 position: relative;
                 overflow: hidden;
-                & .promotoins-image{
-                    & img{
+
+                & .promotoins-image {
+                    & img {
                         position: absolute;
                         left: 0;
                         top: 0;
@@ -457,11 +518,13 @@
                         z-index: 0;
                     }
                 }
+
                 & .tag {
                     position: absolute;
                     z-index: 1;
                     top: 40px;
                     left: 30px;
+
                     & span {
                         padding: 7px 10px;
                         border-radius: 5px;
@@ -474,12 +537,14 @@
                         display: inline-block;
                     }
                 }
+
                 & .promotoins-car-inner {
                     position: relative;
                     padding: 193px 30px 30px 30px;
                     max-width: 500px;
                     width: 100%;
                     z-index: 2;
+
                     & .promotoins-subtitle {
                         font-size: 24px;
                         font-weight: 600;
@@ -488,25 +553,30 @@
                         text-transform: uppercase;
                         margin-bottom: 16px;
                         display: inline-block;
-                
+
                     }
                 }
             }
-            & .card-modal-list{
+
+            & .card-modal-list {
                 & ol {
                     padding-left: 49px;
                     margin-top: -4px;
-                    & li{
+
+                    & li {
                         list-style: decimal;
                         position: relative;
+
                         & p {
                             color: var(--text);
 
                         }
-                        &:not(:last-child){
+
+                        &:not(:last-child) {
                             margin-bottom: 18px;
                         }
-                        &::marker{
+
+                        &::marker {
                             font-size: 20px;
                             font-weight: 700;
                             line-height: 29.9px;
@@ -519,6 +589,7 @@
                             box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px -2px 4px 0px rgba(104, 93, 255, 0.18) inset;
                             position: relative;
                         }
+
                         // &:before {                       
                         //     content: counter(li-count);                       
                         //     position: absolute;
@@ -535,12 +606,13 @@
                         //     box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px -2px 4px 0px rgba(104, 93, 255, 0.18) inset;
 
                         //  }
-                        
+
                     }
                 }
             }
-            & .modal-promotoin-btn{
-                & .q6-button{
+
+            & .modal-promotoin-btn {
+                & .q6-button {
                     width: 100%;
                 }
             }

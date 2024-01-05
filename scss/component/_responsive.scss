@@ -26,6 +26,9 @@
 }
 
 @media (max-width: 1200px) {
+    .button-search {
+        width: 250px !important;
+    }
     .layout-wrap {
         .section-menu-left-mobile {
             display: none;
@@ -134,9 +137,34 @@
     .lottery-ticket .ticket-content-wrap > img {
         max-width: 50%;
     }
+    .footer {
+        margin-bottom: 70px;
+    }
+    .modal-search .modal-dialog {
+        max-width: 700px !important;
+        padding: 0px 30px;
+    }
 }
 
 @media (max-width: 991px) {
+    .model-sign-in .modal-dialog {
+        max-width: 530px;
+        padding: 0 30px;
+    }
+    .model-sign-in .modal-wrap {
+        flex-direction: column;
+    }
+    .model-sign-in .modal-wrap .model-image .model-iner-content {
+    display: none;
+    }
+    .model-sign-in .modal-wrap .model-image {
+        position: absolute;
+        max-width: 100%;
+        opacity: 0.2;
+    }
+    .model-sign-in .modal-wrap .model-content {
+       position: relative;
+    }
     .mt--109 {
         margin-top: -50px;
     }
@@ -233,6 +261,32 @@
 }
 
 @media (max-width: 767px) {
+    .model-promotoins .modal-dialog-centered .modal-content-promotoins .image-modal-promotoins .promotoins-car-inner {
+        padding: 90px 30px 30px 30px;
+    }
+    .model-promotoins .modal-dialog-centered .modal-content-promotoins .image-modal-promotoins .promotoins-car-inner .title {
+        font-size: 25px;
+        line-height: 35.88px;
+    }
+    .model-promotoins .modal-dialog-centered .modal-content-promotoins .card-modal-list ol {
+        padding-left: 20px;
+        margin-top: 0px;
+    }
+    .model-promotoins .modal-dialog-centered .modal-content-promotoins .btn-close {
+        z-index: 5;
+    }
+    .model-promotoins .modal-dialog-centered .modal-content-promotoins .image-modal-promotoins .promotoins-car-inner .promotoins-subtitle {
+        font-size: 17px;
+        line-height: 25.88px;
+        margin-bottom: 10px;
+    }
+    .model-promotoins .modal-dialog-centered {
+        max-width: 530px;
+        padding: 0 30px;
+    }
+    .footer-coppy-right .footer-bottom img {
+        margin-bottom: 26px;
+    }
     .q6-widget-instant .row > * {
       margin-bottom: 20px;
     }
@@ -343,6 +397,12 @@
 }
 
 @media (max-width: 600px) {
+    .modal-search .modal-dialog .search-modal-games .search-game-static .input-left-container .button-search p {
+        display: none;
+    }
+    .modal-search .modal-dialog .search-modal-games .search-game-static .input-left-container .button-search {
+        width: auto !important;
+    }
     .header {
         .header-inner {
             .header-inner-wrap {
@@ -513,6 +573,13 @@
     .winner-paging {
         justify-content: center;
     }
+    
+.model-sign-in .model-otp .otp .input-otp input.input-native {
+    font-size: 25px !important;
+    line-height: 25px !important;
+    padding: 0px !important;
+    height: 50px !important;
+}
 
 }
 

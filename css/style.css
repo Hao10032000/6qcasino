@@ -5277,7 +5277,7 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   height: 100%;
   left: 0;
   overflow-y: auto;
-  z-index: 20;
+  z-index: 111;
   background-color: var(--bg2);
   display: -webkit-box;
   display: -moz-box;
@@ -5542,6 +5542,10 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   color: var(--white) !important;
   font-weight: 600 !important;
 }
+.section-menu-left .menu-list .has-children.active {
+  background-color: var(--bg3);
+  border-radius: 10px;
+}
 .section-menu-left .menu-list .menu-item {
   margin-bottom: 1.5px;
   -webkit-transition: all 0.3s ease;
@@ -5627,11 +5631,12 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   transition: all 0.3s ease;
   color: var(--white);
 }
+.section-menu-left .menu-list .menu-item.has-children.active a::after {
+  background-color: var(--bg4);
+  color: var(--primary);
+}
 .section-menu-left .menu-list .menu-item.has-children .sub-menu {
   display: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
   background-color: var(--bg3);
   border-radius: 10px;
 }
@@ -6474,41 +6479,25 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   padding: 8px 28px !important;
 }
 
-.model-sign-in {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 20;
-  background: rgba(8, 9, 13, 0.75);
-  backdrop-filter: blur(2px);
-  align-items: flex-start;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  max-height: 100dvh;
-  overflow: auto;
-  width: 100%;
-  display: none;
-  opacity: 0;
-}
 .model-sign-in.show {
   display: flex !important;
   opacity: 1;
 }
-.model-sign-in .modal-wrap {
-  position: relative;
+.model-sign-in .modal-dialog {
   max-width: 1000px;
   width: 100%;
+}
+.model-sign-in .modal-wrap {
+  position: relative;
   display: flex;
+  flex-direction: row;
   margin: auto;
   align-items: center;
   justify-content: space-between;
   border-radius: 20px;
   padding: 30px;
   gap: 50px;
-  background: #181D2E;
+  background: var(--bg1);
   box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.8);
 }
 .model-sign-in .modal-wrap .model-image {
@@ -6581,6 +6570,9 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   background: #252B3E;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.2);
   display: inline-block;
+}
+.model-sign-in .modal-wrap .model-content {
+  width: 100%;
 }
 .model-sign-in .modal-wrap .model-content a {
   color: var(--primary);
@@ -6698,6 +6690,57 @@ form input[type=date]::-webkit-calendar-picker-indicator {
 .model-sign-in .modal-wrap .model-content .form-sign-in .form-buttons {
   margin-bottom: 36px;
 }
+.model-sign-in .model-otp {
+  align-items: flex-start !important;
+}
+.model-sign-in .model-otp .otp .input-otp {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.model-sign-in .model-otp .otp .input-otp input.input-native {
+  font-size: 32px !important;
+  font-weight: 700;
+  line-height: 47.84px !important;
+  padding: 10px !important;
+  height: 65px !important;
+  text-align: center;
+}
+.model-sign-in .model-otp .otp .input-otp input.input-native::placeholder {
+  font-size: 50px !important;
+  font-weight: 700;
+  line-height: 65px !important;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+.model-sign-in .model-otp .otp .form-info {
+  margin-bottom: 53px;
+}
+.model-sign-in .model-otp .otp .form-info .btn-close-model {
+  right: 40px;
+  top: 40px;
+}
+.model-sign-in .model-otp .otp .form-sign-in .title-otp {
+  margin-bottom: 5px;
+}
+.model-sign-in .model-otp .otp .form-sign-in .des-otp {
+  margin-bottom: 30px;
+}
+.model-sign-in .model-otp .otp .form-sign-in .form-subtitle {
+  margin-bottom: 10px;
+}
+.model-sign-in .model-otp .otp .form-sign-in .form-buttons-very {
+  margin-bottom: 10px;
+}
+.model-sign-in .model-otp .otp .form-sign-in .resend {
+  background: transparent;
+  box-shadow: unset;
+}
+.model-sign-in .model-otp .otp .form-sign-in .resend:hover {
+  color: var(--primary);
+  background: transparent;
+}
 
 .btn-close-model {
   position: absolute;
@@ -6707,6 +6750,7 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.3s;
+  z-index: 1;
 }
 .btn-close-model:hover {
   rotate: 90deg;
@@ -6787,6 +6831,10 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   align-items: center;
   justify-content: center;
   gap: 7px;
+  flex-wrap: nowrap;
+}
+.modal-search .modal-dialog .search-modal-games .search-game-static .input-left-container .button-search p {
+  color: var(--white);
 }
 
 .selec-game-search .left .title {
@@ -6942,6 +6990,9 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media (max-width: 1200px) {
+  .button-search {
+    width: 250px !important;
+  }
   .layout-wrap .section-menu-left-mobile {
     display: none;
   }
@@ -7016,8 +7067,33 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   .lottery-ticket .ticket-content-wrap > img {
     max-width: 50%;
   }
+  .footer {
+    margin-bottom: 70px;
+  }
+  .modal-search .modal-dialog {
+    max-width: 700px !important;
+    padding: 0px 30px;
+  }
 }
 @media (max-width: 991px) {
+  .model-sign-in .modal-dialog {
+    max-width: 530px;
+    padding: 0 30px;
+  }
+  .model-sign-in .modal-wrap {
+    flex-direction: column;
+  }
+  .model-sign-in .modal-wrap .model-image .model-iner-content {
+    display: none;
+  }
+  .model-sign-in .modal-wrap .model-image {
+    position: absolute;
+    max-width: 100%;
+    opacity: 0.2;
+  }
+  .model-sign-in .modal-wrap .model-content {
+    position: relative;
+  }
   .mt--109 {
     margin-top: -50px;
   }
@@ -7094,6 +7170,32 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media (max-width: 767px) {
+  .model-promotoins .modal-dialog-centered .modal-content-promotoins .image-modal-promotoins .promotoins-car-inner {
+    padding: 90px 30px 30px 30px;
+  }
+  .model-promotoins .modal-dialog-centered .modal-content-promotoins .image-modal-promotoins .promotoins-car-inner .title {
+    font-size: 25px;
+    line-height: 35.88px;
+  }
+  .model-promotoins .modal-dialog-centered .modal-content-promotoins .card-modal-list ol {
+    padding-left: 20px;
+    margin-top: 0px;
+  }
+  .model-promotoins .modal-dialog-centered .modal-content-promotoins .btn-close {
+    z-index: 5;
+  }
+  .model-promotoins .modal-dialog-centered .modal-content-promotoins .image-modal-promotoins .promotoins-car-inner .promotoins-subtitle {
+    font-size: 17px;
+    line-height: 25.88px;
+    margin-bottom: 10px;
+  }
+  .model-promotoins .modal-dialog-centered {
+    max-width: 530px;
+    padding: 0 30px;
+  }
+  .footer-coppy-right .footer-bottom img {
+    margin-bottom: 26px;
+  }
   .q6-widget-instant .row > * {
     margin-bottom: 20px;
   }
@@ -7188,6 +7290,12 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media (max-width: 600px) {
+  .modal-search .modal-dialog .search-modal-games .search-game-static .input-left-container .button-search p {
+    display: none;
+  }
+  .modal-search .modal-dialog .search-modal-games .search-game-static .input-left-container .button-search {
+    width: auto !important;
+  }
   .header .header-inner .header-inner-wrap .header-right .header-news {
     display: none;
   }
@@ -7293,6 +7401,12 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
   .winner-paging {
     justify-content: center;
+  }
+  .model-sign-in .model-otp .otp .input-otp input.input-native {
+    font-size: 25px !important;
+    line-height: 25px !important;
+    padding: 0px !important;
+    height: 50px !important;
   }
 }
 @media (max-width: 414px) {
