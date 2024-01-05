@@ -155,12 +155,12 @@
 
   });
 
-  $(".btn-top-group .q6-sc ").on("click", function (e) {
-    $('.model-sign-in').toggleClass('show');
-  })
-  $(".btn-close-model ").on("click", function (e) {
-    $('.model-sign-in').toggleClass('show');
-  })
+  // $(".btn-top-group .q6-sc.orange ").on("click", function (e) {
+  //   $('.model-sign-in').toggleClass('show');
+  // })
+  // $(".btn-close-model ").on("click", function (e) {
+  //   $('.model-sign-in').toggleClass('show');
+  // })
 
 
   $(".info-account .name ").on("click", function (e) {
@@ -202,6 +202,8 @@
   $(".title-wrap").on("click", function() {
     $(this).closest('.faq-item').find('.faq-content').slideToggle("show");
   });
+
+  //Side bar game
   $(".game-panel-menu .nav-pills .btn-side-bar-game").on("click", function() {
     $(this).closest('.game-panel-menu').find('.tab-content').addClass("show-tab-penal");
   });

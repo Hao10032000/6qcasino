@@ -39,8 +39,8 @@
                 }
 
                 & .tab-content {
-                    border-right: 1px solid #161C27;
-                    background: #0B0F18;
+                    border-right: 1px solid var(--bg2);
+                    background: var(--bg2);
                     padding: 14px 30px;
                     width: 340px;
                     position: fixed;
@@ -64,7 +64,7 @@
 
                 & i {
                     font-size: 25px;
-                    color: #55657E;
+                    color: var(--body-text);
                 }
 
             }
@@ -89,11 +89,11 @@
 
                         & i {
                             font-size: 22px;
-                            color: #55657E;
+                            color: var(--body-text);
                         }
 
                         & svg path {
-                            fill: #55657E;
+                            fill: var(--body-text);
                         }
 
                         &:hover i {
