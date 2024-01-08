@@ -241,7 +241,7 @@
             & .mobile-button {
                 & span {
                     width: 25px;
-                    height: 2px;
+                    height: 1px;
                     position: relative;
                     display: inline-block;
                     background-color: var(--white);
@@ -250,7 +250,7 @@
                         top: -10px;
                         position: absolute;
                         content: '';
-                        width: 20px;
+                        width: 25px;
                         height: 1px;
                         left: 0;
                         background-color: var(--white);
@@ -260,7 +260,7 @@
                         top: 10px;
                         position: absolute;
                         content: '';
-                        width: 15px;
+                        width: 25px;
                         height: 1px;
                         left: 0;
                         background-color: var(--white);

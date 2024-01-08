@@ -147,7 +147,6 @@
   $('.q6-read-more').click(function () {
     $('.more-text').slideToggle();
     $('.providers-seo').toggleClass('show-overlay');
-
   });
   $('.description-block-buttons').click(function () {
     $('.description-collapse').slideToggle();
@@ -228,6 +227,7 @@
   $(".btn-close-panel").on("click", function (e) {
     $('.tab-content').removeClass('show-tab-penal');
   })
+
 
   // Dom Ready
   $(function () {

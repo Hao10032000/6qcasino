@@ -3803,7 +3803,7 @@ input:checked + .slider:before {
 }
 .header-action .header-bar .button-show-hide .mobile-button span {
   width: 25px;
-  height: 2px;
+  height: 1px;
   position: relative;
   display: inline-block;
   background-color: var(--white);
@@ -3812,7 +3812,7 @@ input:checked + .slider:before {
   top: -10px;
   position: absolute;
   content: "";
-  width: 20px;
+  width: 25px;
   height: 1px;
   left: 0;
   background-color: var(--white);
@@ -3821,7 +3821,7 @@ input:checked + .slider:before {
   top: 10px;
   position: absolute;
   content: "";
-  width: 15px;
+  width: 25px;
   height: 1px;
   left: 0;
   background-color: var(--white);
@@ -6353,6 +6353,15 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
+.game-panel-content .game-content-drop {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.game-panel-content .game-content-drop::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
+}
 
 .widget-tabs .widget-menu-tab {
   display: flex;
@@ -6798,6 +6807,11 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   max-width: 1110px !important;
   margin: 50px auto !important;
 }
+.modal-search .modal-dialog .modal-content {
+  border-radius: 20px;
+  background: var(--bg2);
+  box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.8);
+}
 .modal-search .modal-dialog .search-modal-games {
   padding: 16px;
   border-radius: 10px;
@@ -6841,7 +6855,7 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 18px;
   font-weight: 500;
   line-height: 26.91px;
-  color: var(--body-text);
+  color: var(--text);
 }
 .selec-game-search .btn-groups .swiper-button-prev,
 .selec-game-search .btn-groups .swiper-button-next {
@@ -7076,6 +7090,25 @@ form input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media (max-width: 991px) {
+  .table-glance-wrapper {
+    width: 1000px;
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+  .table-glance-wrapper .table-vip {
+    width: 1000px;
+  }
+  .payment-list-table {
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .table-payment-body {
+    width: 1000px;
+    max-width: revert;
+  }
+  .payment-list-table .table-payment-header {
+    width: 1000px;
+  }
   .model-sign-in .modal-dialog {
     max-width: 530px;
     padding: 0 30px;
@@ -7309,6 +7342,15 @@ form input[type=date]::-webkit-calendar-picker-indicator {
     width: 90px !important;
   }
   .nav-list-item {
+    width: 50% !important;
+  }
+  .nav-list-item .title-footer {
+    margin-bottom: 20px;
+  }
+  .footer-coppy-right .footer-bottom img {
+    margin-right: 17px !important;
+  }
+  .footer-action {
     width: 100% !important;
   }
   .wg-partners .content-1,
