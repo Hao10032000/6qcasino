@@ -12,6 +12,8 @@
         overflow-y: scroll;
         white-space: nowrap;
         overflow-y: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.08);
 
         .item-title {
             @include flex(center, center);
@@ -26,7 +28,7 @@
             .inner {
                 @include flex(center, center);
                 gap: 8px;
-                color: var(--white);
+                color: var(--white-3);
                 font-size: 15px;
                 font-weight: 400;
                 line-height: 22.43px;
@@ -45,10 +47,10 @@
                 background: var(--primary);
 
                 .inner {
-                    color: var(--white);
+                    color: #ffffff;
 
                     & i {
-                        color: var(--white)
+                        color: #ffffff;
                     }
                 }
             }
@@ -60,7 +62,7 @@
                 height: 110%;
                 width: 1px;
                 opacity: 0.5;
-                background: linear-gradient(90deg, rgba(67, 83, 109, 0.00) 0%, #43536D 48.66%, rgba(67, 83, 109, 0.00) 100%);
+                background: var(--line-tab);
             }
         }
     }
@@ -69,7 +71,7 @@
     display: inline-flex;
     padding: 6px;
     border-radius: 10px;
-    background-color: var(--bg1);
+    background-color: var(--bg1-4);
     gap:11px;
 
     & .nav-item {
@@ -82,7 +84,7 @@
             font-size: 15px;
             font-weight: 400;
             line-height: 22.43px;
-            color: var(--white);
+            color: var(--white-4);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -94,7 +96,7 @@
             &.active{
                 background-color: var(--primary);
                 & i {
-                    color: var(--white);
+                    color: #ffffff;
                 }
             }
         }
@@ -118,4 +120,7 @@
         padding: 8px 28px !important;
     }
         
+}
+.title-section-tab .title-tab {
+    color: var(--white-2);
 }

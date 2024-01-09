@@ -628,7 +628,7 @@ h5,
 h6,
 .h6 {
     font-family: $font-main-family;
-    color: var(--white);
+    color: #ffffff;
     font-weight: 700;
     text-rendering: optimizeLegibility;
 }
@@ -679,7 +679,7 @@ h6,
     color: var(--primary);
 }
 .text-white {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .hidden {

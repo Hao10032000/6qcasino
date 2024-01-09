@@ -24,14 +24,23 @@ $black: #08090D;
 :root {
     --bg: #08090D;
     --white:#ffffff;
+    --white-2:#ffffff;
+    --white-3:#ffffff;
+    --white-4:#ffffff;
     --bg1:#181D2E;
+    --bg1-2:#181D2E;
+    --bg1-3:#181D2E;
+    --bg1-4:#181D2E;
     --bg2:#0B0F18;
     --bg3:#181F2F;
+    --bg3-2:#181F2F;
     --bg4:#101623;
     --body-text: #55657E;
     --primary :#6055FF;
+    --primary-2 :#6055FF;
     --line:#252B3E;
     --text:#93ACD3;
+    --text-2:#93ACD3;
     --pink:#FF315D;
     --violet:#A064F9;
     --yellow:#FCD377;
@@ -40,6 +49,8 @@ $black: #08090D;
     --line: #30353F;
     --bg-flag:#101422;
     --box-benefit:#101623;
+    --name:#141A25;
+    --pani:#181A21;
     
 
     //rgb
@@ -49,6 +60,42 @@ $black: #08090D;
     --dot:rgba(132, 196, 17, 1);
     --box:rgba(0, 0, 0, 0.7);
     --bg-popup:rgba(41, 34, 136, 0.5);
+    --bg-divider: linear-gradient(90deg, rgba(36, 44, 72, 0) 0%, #242C48 32.71%, #242C48 52.66%, #242C48 73.75%, rgba(36, 44, 72, 0) 100%);
+    --line-tab: linear-gradient(90deg, rgba(67, 83, 109, 0) 0%, #43536D 48.66%, rgba(67, 83, 109, 0) 100%);
+   --bg-more: linear-gradient(180deg, rgba(8, 9, 13, 0) 0%, #08090D 100%);
+  --line-footer: rgba(48, 53, 63, 0.4);
+  --card-bling: 0px 6px 20px 0px rgba(0, 0, 0, 0.7);
+  --ticket: 0px 24px 30px 0px rgba(0, 0, 0, 0.7);
+  --more2: linear-gradient(180deg, rgba(16, 19, 34, 0) 0%, #101322 100%);
 
     
+}
+.dark-theme {
+    --bg2:#ffffff;
+    --bg: #ffffff;
+    --bg1:#ffffff;
+    --text:#101623;
+    --white:#55657E;
+    --bg3: #E9EEF6;
+    --box-benefit:#ffffff;
+    --bg-divider: linear-gradient(90deg, rgba(176, 180, 187, 0.00) 0%, #B0B4BB 48.66%, rgba(176, 180, 187, 0.00) 100%);
+    --bg1-2:#E9EEF6;
+    --white-2:#101623;
+    --text-2:#55657E;
+    --bg1-3:#E9EEF6;
+    --bg1-4:#181D2E;
+    --primary-2 :#101623;
+    --white-3:#08090D;
+    --line-tab: linear-gradient(90deg, rgba(176, 180, 187, 0.00) 0%, #B0B4BB 48.66%, rgba(176, 180, 187, 0.00) 100%);
+    --bg-white: rgba(147, 172, 211, 0.20);
+    --white-4:#F4F5F9;
+    --bg-more: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    --line-footer: rgba(147, 172, 211, 0.2);
+    --box-benefit:#E9EEF6;
+    --name:#E9EEF6;
+    --card-bling: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+    --ticket: 0px 24px 30px 0px rgba(0, 0, 0, 0.2);
+    --pani:#E9EEF6;
+    --more2: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+
 }

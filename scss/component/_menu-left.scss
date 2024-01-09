@@ -7,6 +7,7 @@
     left: 0;
     overflow-y: auto;
     z-index: 111;
+    box-shadow: 6px 0px 20px 0px rgba(0, 0, 0, 0.08);
     background-color: var(--bg2);
     // padding-top: 80px;
     @include flex(center, start);
@@ -252,7 +253,7 @@
                     width: 50px;
                     height: 50px;
                     border-radius: 100%;
-                    background-color: #141A25;
+                    background-color: var(--name);
                     border: solid 1px rgba(147, 172, 211, 0.08);
                     display: flex;
                     justify-content: center;
@@ -299,11 +300,11 @@
                 background-color: var(--bg3);
 
                 & i {
-                    color: var(--primary) !important;
+                    color: var(--primary-2) !important;
                 }
 
                 & .text {
-                    color: var(--white) !important;
+                    color: var(--white-2) !important;
                     font-weight: 600 !important;
 
                 }
@@ -322,18 +323,18 @@
                     background-color: var(--bg3);
 
                     &:hover>i {
-                        color: var(--primary);
+                        color: var(--primary-2);
                     }
 
                     &:hover svg {
                         & path {
-                            fill: var(--primary);
-                            stroke: var(--primary);
+                            fill: var(--primary-2);
+                            stroke: var(--primary-2);
                         }
                     }
 
                     &:hover>.text {
-                        color: var(--white);
+                        color: var(--white-2);
                         font-weight: 600;
 
                     }
@@ -381,7 +382,7 @@
                     &::after,
                     i,
                     .text {
-                        color: var(--ffac-4-b);
+                        color: var(--primary-2);
                     }
                 }
             }
@@ -394,7 +395,7 @@
                     font-size: 5px;
                     padding: 10px 7px;
                     border-radius: 6px;
-                    background-color: var(--bg1);
+                    background-color: var(--bg1-3);
                     font-family: "icomoon";
                     @include transition3;
                     color: var(--white);
@@ -537,7 +538,7 @@
         padding: 10px 20px;
         border-radius: 10px;
         border: 1px solid rgba(147, 172, 211, 0.08);
-        background: #141A25;
+        background: var(--name);
         align-items: center;
         & .account-balance-value{
             font-size: 32px;
@@ -582,7 +583,7 @@
     height: 1px;
     margin-top: 18px;
     margin-bottom: 18px;
-    background: linear-gradient(90deg, rgba(36, 44, 72, 0.00) 0%, #242C48 32.71%, #242C48 52.66%, #242C48 73.75%, rgba(36, 44, 72, 0.00) 100%);
+    background:var(--bg-divider);
 }
 
 .community {
@@ -596,7 +597,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #181D2E;
+    background-color: var(--bg1-2);
     border-radius: 10px;
     margin-bottom: 18px;
 

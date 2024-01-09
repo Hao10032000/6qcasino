@@ -115,17 +115,17 @@
             font-family: $fontIcon;
             content: '\e960';
             font-size: 8px;
-            color: var(--text);
+            color: #93ACD3;
             @include transition3;
             rotate: -50deg;
         }
 
         &:hover {
             &::after {
-                color: var(--primary);
+                color: #6055FF;
             }
 
-            border: 1px solid var(--primary);
+            border: 1px solid #6055FF;
         }
     }
 
@@ -283,7 +283,7 @@
                     font-weight: 800;
                     line-height: 29.9px;
                     letter-spacing: 7px;
-                    color: var(--white);
+                    color: #ffffff;
                     text-transform: uppercase;
                     margin-bottom: -5px;
                     display: inline-block;
@@ -360,7 +360,7 @@
                 & .des-slide {
                     margin-bottom: 46px;
                     padding-right: 12px;
-                    color: var(--text);
+                    color: #93ACD3;
                 }
 
                 & .btn-slide {

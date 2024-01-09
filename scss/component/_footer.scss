@@ -3,7 +3,7 @@
         font-size: 15px;
         font-weight: 500;
         line-height: 22.43px;
-        color: var(--text);
+        color:#93ACD3;
         text-transform: uppercase;
         margin-bottom: 38px;
 
@@ -39,7 +39,7 @@
 .footer-section{
     margin-bottom: 50px;
     padding-bottom: 50px;
-    border-bottom: solid 1px rgba(48, 53, 63, 0.4);
+    border-bottom: solid 1px var(--line-footer);
 }
 .footer-coppy-right{
     margin-bottom: 40px;

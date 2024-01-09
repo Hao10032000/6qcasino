@@ -147,10 +147,12 @@
   $('.q6-read-more').click(function () {
     $('.more-text').slideToggle();
     $('.providers-seo').toggleClass('show-overlay');
+    $('.q6-read-more').toggleClass('show-overlay');
   });
   $('.description-block-buttons').click(function () {
     $('.description-collapse').slideToggle();
     $('.widget-terms').toggleClass('show-overlay');
+     $('.description-block-buttons').toggleClass('show-overlay');
 
   });
 
@@ -228,6 +230,33 @@
     $('.tab-content').removeClass('show-tab-penal');
   })
 
+ //show hide password
+  $(document).ready(function() {
+    $(".toggle-password").click(function() {
+      if ($(".input-native").attr("type") == "password") {
+        $(".input-native").attr("type", "text");
+      } else {
+        $(".input-native").attr("type", "password");
+      }
+    });
+    $(".toggle-password").click(function() {
+      $(".toggle-password .eye").toggle();
+    });
+  });
+  //dark more
+  var toggleTheme = function () {
+    $("body").toggleClass(localStorage.toggled);
+    var toggle = $(".dark-mode-theme");
+    toggle.on("click", function () {
+      if (localStorage.toggled != "dark-theme") {
+        $("body").toggleClass("dark-theme", true);
+        localStorage.toggled = "dark-theme";
+      } else {
+        $("body").toggleClass("dark-theme", false);
+        localStorage.toggled = "";
+      }
+    });
+  };
 
   // Dom Ready
   $(function () {
@@ -239,6 +268,7 @@
     headerFixed();
     preloader();
     video();
+    toggleTheme();
     goTop();
 
   });

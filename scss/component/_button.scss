@@ -7,14 +7,14 @@
     background: linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
     box-shadow: 0px 3px 16px 0px rgba(102, 89, 255, 0.50), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 4px 0px 0px #403999;
     border-radius: 10px;
-    color: var(--white);
+    color: #ffffff;
     display: inline-block;
     text-align: center;
     margin-bottom: 4px;
 
     &:hover {
         background: linear-gradient(0deg, rgba(129, 118, 254, 1) 0%, rgba(89, 78, 255, 1) 100%);
-        color: var(--white);
+        color: #ffffff;
 
     }
 
@@ -69,6 +69,22 @@
             color: var(--primary);
         }
     }
+ 
+}
+ .less{
+    display: none;
+}
+.show-overlay{
+    & .more{
+        display: none;
+    }
+    & .less{
+        display: block;
+    }
+    & .more-link{
+        display: flex;
+        align-items: center;
+    }
 }
 
 .q6-button-large {
@@ -80,14 +96,14 @@
     background: linear-gradient(0deg, #594EFF 0.8%, #8176FE 100%);
     box-shadow: 0px 3px 16px 0px rgba(102, 89, 255, 0.50), 0px 3px 3px 0px rgba(255, 255, 255, 0.30) inset, 0px 4px 0px 0px #403999;
     border-radius: 10px;
-    color: var(--white);
+    color: #ffffff;
     display: inline-block;
     text-align: center;
     margin-bottom: 4px;
 
     &:hover {
         background: linear-gradient(0deg, rgba(129, 118, 254, 1) 0%, rgba(89, 78, 255, 1) 100%);
-        color: var(--white);
+        color: #ffffff;
 
     }
 
@@ -104,7 +120,7 @@
     font-weight: 500;
     line-height: 19.6px;
     border-radius: 10px;
-    color: var(--white);
+    color: #ffffff;
     display: inline-block;
     text-align: center;
 
@@ -114,7 +130,7 @@
 
         &:hover {
             background: linear-gradient(180deg, #594EFF 0.8%, #8176FE 100%);
-            color: var(--white);
+            color: #ffffff;
         }
     }
 
@@ -124,7 +140,7 @@
 
         &:hover {
             background: linear-gradient(180deg, #FF6B00 0.8%, #FFA869 100%);
-            color: var(--white);
+            color: #ffffff;
         }
     }
 }

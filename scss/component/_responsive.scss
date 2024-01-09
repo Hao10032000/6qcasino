@@ -123,6 +123,19 @@
 }
 
 @media (max-width: 1200px) {
+    .header-right .btn-top-group .avata {
+        display: none !important;
+    }
+
+    .header-right .btn-top-group .info {
+        display: none !important;
+    }
+
+    .q6-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .box-image-dashboard {
         margin-bottom: 30px;
     }
@@ -463,6 +476,10 @@
 }
 
 @media (max-width: 600px) {
+    .header-dashboard .wrap .header-right {
+        gap: 10px;
+    }
+
     .modal-search .modal-dialog .search-modal-games .search-game-static .input-left-container .button-search p {
         display: none;
     }
